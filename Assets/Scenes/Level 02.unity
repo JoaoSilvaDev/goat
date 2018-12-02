@@ -198,7 +198,7 @@ Transform:
   - {fileID: 1387275750}
   - {fileID: 303117096}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &42777847
 GameObject:
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66c3673f58b101044b20c8055e574a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: {fileID: 1983033595}
+  enemiesParents: {fileID: 1983033595}
 --- !u!4 &42777849
 Transform:
   m_ObjectHideFlags: 0
@@ -1842,7 +1842,7 @@ Transform:
   - {fileID: 2022788258}
   - {fileID: 1975730622}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1047283855
 Prefab:
@@ -2549,6 +2549,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 1991371451318408, guid: aa1efef478388fa4bac57ad0265edc09, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1efef478388fa4bac57ad0265edc09, type: 2}
   m_IsPrefabAsset: 0
@@ -3038,7 +3042,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4043587444211346, guid: 915d0bcaa2de9d8499ae177d69fa17b8, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114310050827800460, guid: 915d0bcaa2de9d8499ae177d69fa17b8,
+        type: 2}
+      propertyPath: winningSceneName
+      value: Level 03
+      objectReference: {fileID: 0}
+    - target: {fileID: 114310050827800460, guid: 915d0bcaa2de9d8499ae177d69fa17b8,
+        type: 2}
+      propertyPath: losingSceneName
+      value: Level 02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 915d0bcaa2de9d8499ae177d69fa17b8, type: 2}
@@ -3345,7 +3359,7 @@ Transform:
   m_Children:
   - {fileID: 1490472634}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1999064110
 Prefab:

@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66c3673f58b101044b20c8055e574a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: {fileID: 1983033595}
+  enemiesParents: {fileID: 1983033595}
 --- !u!4 &42777849
 Transform:
   m_ObjectHideFlags: 0
@@ -3359,6 +3359,16 @@ Prefab:
       propertyPath: directions.Array.data[5].x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114798559899388206, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: directions.Array.data[2].y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114798559899388206, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: directions.Array.data[3].y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1efef478388fa4bac57ad0265edc09, type: 2}
   m_IsPrefabAsset: 0
@@ -3504,6 +3514,16 @@ Prefab:
     - target: {fileID: 1991371451318408, guid: aa1efef478388fa4bac57ad0265edc09, type: 2}
       propertyPath: m_Name
       value: Wolf (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114798559899388206, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: directions.Array.data[3].y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114798559899388206, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: directions.Array.data[2].y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1efef478388fa4bac57ad0265edc09, type: 2}
