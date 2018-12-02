@@ -136,8 +136,6 @@ public class Player : MonoBehaviour
             yield return null;
         }
 
-        //_gameManager.CallForMove();
-
         _isMoving = false;
         yield return 0;
     }

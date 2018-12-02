@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyPathMove : Enemy
 {
-	int index = 0;
+	int index = -1;
 	Vector2 _input = Vector2.zero;
 	public List<Vector3> directions = new List<Vector3>();
 
@@ -33,7 +33,6 @@ public class EnemyPathMove : Enemy
         _time = 0.0f;
 
         endPos = new Vector3(startPos.x + _input.x, startPos.y + _input.y, startPos.z);
-        Debug.Log(startPos + " " + endPos);
 
         while (_time < 1.0f)
         {
