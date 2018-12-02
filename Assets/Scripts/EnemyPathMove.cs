@@ -20,7 +20,7 @@ public class EnemyPathMove : Enemy
         if(index > directions.Count-1)
             index = 0;       
 
-		_input = directions[index];
+		_input = directions[index] * 0.95f;
 		StartCoroutine(Move(transform));
 	}
 
