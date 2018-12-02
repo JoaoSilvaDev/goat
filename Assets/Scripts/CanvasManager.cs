@@ -7,15 +7,14 @@ public class CanvasManager : MonoBehaviour
     private Player _player;
     public Text hpText;
 
-    public Animator levelTransition;
-    public Animator levelNumber;
-    public GameObject levelNumberText;
+    public Animator levelBeginTransition;
+    public Animator levelEndTransition;
 
-    void Start()
+    void Awake()
     {
         _player = FindObjectOfType<Player>();
         UpdateHP();
-        StartCoroutine(LevelTransitionAnimationHandler());
+        StartCoroutine(BeginLevelSequence());
     }
 
     public void UpdateHP()
@@ -23,10 +22,23 @@ public class CanvasManager : MonoBehaviour
         hpText.text = "hp: " + _player.hp;
     }
 
-    IEnumerator LevelTransitionAnimationHandler()
+    public void InitEndLevelSequence()
     {
-        levelTransition.SetTrigger("start");
-        levelNumber.SetTrigger("start");
+        StartCoroutine(EndLevelSequence());
+    }
+
+    IEnumerator BeginLevelSequence()
+    {
+        _player.isMoving = true;
+        levelBeginTransition.SetTrigger("start");
+        yield return new WaitForSeconds(1.0f);
+        _player.isMoving = false;
+    }
+
+    IEnumerator EndLevelSequence()
+    {
+        levelEndTransition.gameObject.SetActive(true);
+        levelEndTransition.SetTrigger("start");        
         yield return null;
     }
 }

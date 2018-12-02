@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Level transition
+  m_Name: Level transition Begin
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: start
@@ -13,7 +13,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -115,7 +115,7 @@ AnimatorStateMachine:
     m_Position: {x: 312, y: 12, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102659284666312974}
-    m_Position: {x: 318.34412, y: 115.84418, z: 0}
+    m_Position: {x: 324, y: 120, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

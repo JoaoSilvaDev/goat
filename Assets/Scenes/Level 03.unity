@@ -340,8 +340,7 @@ Prefab:
   m_IsPrefabAsset: 0
 --- !u!4 &60874173 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4165433935084046, guid: 971b8b23d22bf2c419587615cd8acc4a,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 60874172}
 --- !u!1001 &89934592
 Prefab:
@@ -812,6 +811,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpText: {fileID: 1005010167}
+  levelBeginTransition: {fileID: 0}
+  levelEndTransition: {fileID: 0}
 --- !u!114 &304448762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -858,7 +859,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 466093062}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -866,7 +867,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 961695473
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &304448765

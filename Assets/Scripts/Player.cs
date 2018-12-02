@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     Direction currentDirection;
     private Vector2 _input;
-    private bool _isMoving = false;
+    public bool isMoving = false;
     Vector3 startPos, endPos;
     private float _time;
 
@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
         Debug.DrawRay(leftCastVector, Vector2.left * raycastDistance, Color.red);
         Debug.DrawRay(rightCastVector, Vector2.right * raycastDistance, Color.red);
 
-        if (!_isMoving)
+        if (!isMoving)
         {            
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
@@ -250,7 +250,7 @@ public class Player : MonoBehaviour
 
     IEnumerator Move(Transform entity)
     {
-        _isMoving = true;
+        isMoving = true;
         startPos = entity.position;
         _time = 0.0f;
 
@@ -265,7 +265,7 @@ public class Player : MonoBehaviour
         }
 
         _collider.enabled = true;
-        _isMoving = false;
+        isMoving = false;
         yield return 0;
     }
 
@@ -309,15 +309,15 @@ public class Player : MonoBehaviour
     IEnumerator GameOver()
     {
         //play animation
-        _isMoving = true;
+        isMoving = true;
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene(losingSceneName, LoadSceneMode.Single);
     }
 
     IEnumerator Winning()
     {
-        //play animation
-        _isMoving = true;
+        _canvas.InitEndLevelSequence();
+        isMoving = true;
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene(winningSceneName, LoadSceneMode.Single);
     }
