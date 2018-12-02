@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (hp <= 0)
+        if (hp <= 1)
             StartCoroutine(GameOver());
     }
 
@@ -131,14 +131,12 @@ public class Player : MonoBehaviour
         _gameManager.CallForMove();
 
         while (_time < 1.0f && !isWarping)
-        {
-            GetComponent<BoxCollider2D>().enabled = false;
+        {            
             _time += Time.deltaTime * speed;
             entity.position = Vector3.Lerp(startPos, endPos, _time);
             yield return null;
         }        
-
-        GetComponent<BoxCollider2D>().enabled = true;
+        
         _isMoving = false;
         yield return 0;
     }
@@ -152,6 +150,15 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("Goal"))
         {
             StartCoroutine(Winning());
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Sand"))
+        {
+            print("Destroyed");
+            Destroy(collision.gameObject);
         }
     }
 

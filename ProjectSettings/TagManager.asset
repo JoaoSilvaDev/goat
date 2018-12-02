@@ -7,6 +7,7 @@ TagManager:
   - Walls
   - Enemy
   - Goal
+  - Sand
   layers:
   - Default
   - TransparentFX
