@@ -4,10 +4,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Direction currentDirection;
-    Vector2 input;
-    bool isMoving = false;
+    private Vector2 _input;
+    private bool _isMoving = false;
     Vector3 startPos, endPos;
-    float time;
+    private float _time;
 
     public float speed;
 
@@ -17,7 +17,9 @@ public class Player : MonoBehaviour
     public int hp = 10;
 
     public float raycastDistance;
-    private BoxCollider2D collider;
+    private BoxCollider2D _collider;
+
+    public bool isWarping;
 
     enum Direction
     {
@@ -30,7 +32,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         _canvas = FindObjectOfType<CanvasManager>();
-        collider = GetComponent<BoxCollider2D>();
+        _collider = GetComponent<BoxCollider2D>();
     }
 
     void Update()
@@ -40,10 +42,10 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 upCastVector = new Vector2(transform.position.x, transform.position.y - (collider.bounds.size.y / 2));
-        Vector2 downCastVector = new Vector2(transform.position.x, transform.position.y - (collider.bounds.size.y / 2));
-        Vector2 rightCastVector = new Vector2(transform.position.x + (collider.bounds.size.x / 2), transform.position.y);
-        Vector2 leftCastVector = new Vector2(transform.position.x + (collider.bounds.size.x / 2), transform.position.y);
+        Vector2 upCastVector = new Vector2(transform.position.x, transform.position.y + (_collider.bounds.size.y / 2));
+        Vector2 downCastVector = new Vector2(transform.position.x, transform.position.y - (_collider.bounds.size.y / 2));
+        Vector2 rightCastVector = new Vector2(transform.position.x + (_collider.bounds.size.x / 2), transform.position.y);
+        Vector2 leftCastVector = new Vector2(transform.position.x - (_collider.bounds.size.x / 2), transform.position.y);
 
         RaycastHit2D upCast = Physics2D.Raycast(upCastVector, Vector2.up, raycastDistance);
         RaycastHit2D downCast = Physics2D.Raycast(downCastVector, Vector2.down, raycastDistance);
@@ -55,36 +57,36 @@ public class Player : MonoBehaviour
         Debug.DrawRay(leftCastVector, Vector2.left * raycastDistance, Color.red);
         Debug.DrawRay(rightCastVector, Vector2.right * raycastDistance, Color.red);
 
-        if (!isMoving)
+        if (!_isMoving)
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow) && leftCast.collider == null)
-                input.x = -1;
+                _input.x = -1;
             else if (Input.GetKeyDown(KeyCode.RightArrow) && rightCast.collider == null)
-                input.x = 1;
+                _input.x = 1;
             else if (Input.GetKeyDown(KeyCode.UpArrow) && upCast.collider == null)
-                input.y = 1;
+                _input.y = 1;
             else if (Input.GetKeyDown(KeyCode.DownArrow) && downCast.collider == null)
-                input.y = -1;
+                _input.y = -1;
             else
             {
-                input.x = 0;
-                input.y = 0;
+                _input.x = 0;
+                _input.y = 0;
             }
 
-            if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
-                input.y = 0;
+            if (Mathf.Abs(_input.x) > Mathf.Abs(_input.y))
+                _input.y = 0;
             else
-                input.x = 0;
+                _input.x = 0;
 
-            if (input != Vector2.zero)
+            if (_input != Vector2.zero)
             {
-                if (input.x < 0)
+                if (_input.x < 0)
                     currentDirection = Direction.Left;
-                if (input.x > 0)
+                if (_input.x > 0)
                     currentDirection = Direction.Right;
-                if (input.y < 0)
+                if (_input.y < 0)
                     currentDirection = Direction.Down;
-                if (input.y > 0)
+                if (_input.y > 0)
                     currentDirection = Direction.Up;
 
                 switch (currentDirection)
@@ -113,20 +115,20 @@ public class Player : MonoBehaviour
 
     IEnumerator Move(Transform entity)
     {
-        isMoving = true;
+        _isMoving = true;
         startPos = entity.position;
-        time = 0.0f;
+        _time = 0.0f;
 
-        endPos = new Vector3(startPos.x + System.Math.Sign(input.x), startPos.y + System.Math.Sign(input.y), startPos.z);
+        endPos = new Vector3(startPos.x + System.Math.Sign(_input.x), startPos.y + System.Math.Sign(_input.y), startPos.z);
 
-        while (time < 1.0f)
-        {            
-            time += Time.deltaTime * speed;
-            entity.position = Vector3.Lerp(startPos, endPos, time);
+        while (_time < 1.0f && !isWarping)
+        {
+            _time += Time.deltaTime * speed;
+            entity.position = Vector3.Lerp(startPos, endPos, _time);
             yield return null;
         }
 
-        isMoving = false;
+        _isMoving = false;
         yield return 0;
     }
 }
