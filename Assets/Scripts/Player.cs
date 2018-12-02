@@ -128,14 +128,17 @@ public class Player : MonoBehaviour
         _time = 0.0f;
 
         endPos = new Vector3(startPos.x + _input.x, startPos.y + _input.y, startPos.z);
+        _gameManager.CallForMove();
 
         while (_time < 1.0f && !isWarping)
         {
+            GetComponent<BoxCollider2D>().enabled = false;
             _time += Time.deltaTime * speed;
             entity.position = Vector3.Lerp(startPos, endPos, _time);
             yield return null;
-        }
+        }        
 
+        GetComponent<BoxCollider2D>().enabled = true;
         _isMoving = false;
         yield return 0;
     }
