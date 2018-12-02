@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
 
     public string sceneName;
 
+    private GameManager _gameManager;
+
     enum Direction
     {
         Up,
@@ -36,6 +38,7 @@ public class Player : MonoBehaviour
     {
         _canvas = FindObjectOfType<CanvasManager>();
         _collider = GetComponent<BoxCollider2D>();
+        _gameManager = FindObjectOfType<GameManager>();
     }
 
     void Update()
@@ -130,6 +133,8 @@ public class Player : MonoBehaviour
             entity.position = Vector3.Lerp(startPos, endPos, _time);
             yield return null;
         }
+
+        _gameManager.CallForMove();
 
         _isMoving = false;
         yield return 0;
