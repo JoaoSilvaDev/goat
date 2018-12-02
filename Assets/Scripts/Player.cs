@@ -44,7 +44,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        
+        if (hp <= 0)
+            StartCoroutine(GameOver());
     }
 
     void FixedUpdate()
@@ -135,7 +136,7 @@ public class Player : MonoBehaviour
             yield return null;
         }
 
-        _gameManager.CallForMove();
+        //_gameManager.CallForMove();
 
         _isMoving = false;
         yield return 0;
@@ -145,21 +146,27 @@ public class Player : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            GameOver();
+            StartCoroutine(GameOver());
         }
         if (collision.CompareTag("Goal"))
         {
-            Winning();
+            StartCoroutine(Winning());
         }
     }
 
-    void GameOver()
+    IEnumerator GameOver()
     {
+        //play animation
+        _isMoving = true;
+        yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene(losingSceneName, LoadSceneMode.Single);
     }
 
-    void Winning()
+    IEnumerator Winning()
     {
+        //play animation
+        _isMoving = true;
+        yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene(winningSceneName, LoadSceneMode.Single);
     }
 }
