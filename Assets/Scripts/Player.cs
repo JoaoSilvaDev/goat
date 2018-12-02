@@ -22,7 +22,8 @@ public class Player : MonoBehaviour
 
     public bool isWarping;
 
-    public string sceneName;
+    public string losingSceneName;
+    public string winningSceneName;
 
     private GameManager _gameManager;
 
@@ -146,10 +147,19 @@ public class Player : MonoBehaviour
         {
             GameOver();
         }
+        if (collision.CompareTag("Goal"))
+        {
+            Winning();
+        }
     }
 
     void GameOver()
     {
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        SceneManager.LoadScene(losingSceneName, LoadSceneMode.Single);
+    }
+
+    void Winning()
+    {
+        SceneManager.LoadScene(winningSceneName, LoadSceneMode.Single);
     }
 }

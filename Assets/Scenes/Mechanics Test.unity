@@ -1858,7 +1858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66c3673f58b101044b20c8055e574a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: {fileID: 0}
+  enemies: {fileID: 1867648409}
 --- !u!4 &1084446211
 Transform:
   m_ObjectHideFlags: 0
@@ -2207,52 +2207,49 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1265960365}
     m_Modifications:
-    - target: {fileID: 4417063332547056, guid: a089a90a79658144e82daa6f4af85b2a, type: 2}
+    - target: {fileID: 4165433935084046, guid: 971b8b23d22bf2c419587615cd8acc4a, type: 2}
       propertyPath: m_LocalPosition.x
       value: 2.85
       objectReference: {fileID: 0}
-    - target: {fileID: 4417063332547056, guid: a089a90a79658144e82daa6f4af85b2a, type: 2}
+    - target: {fileID: 4165433935084046, guid: 971b8b23d22bf2c419587615cd8acc4a, type: 2}
       propertyPath: m_LocalPosition.y
       value: -2.85
       objectReference: {fileID: 0}
-    - target: {fileID: 4417063332547056, guid: a089a90a79658144e82daa6f4af85b2a, type: 2}
+    - target: {fileID: 4165433935084046, guid: 971b8b23d22bf2c419587615cd8acc4a, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4417063332547056, guid: a089a90a79658144e82daa6f4af85b2a, type: 2}
+    - target: {fileID: 4165433935084046, guid: 971b8b23d22bf2c419587615cd8acc4a, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4417063332547056, guid: a089a90a79658144e82daa6f4af85b2a, type: 2}
+    - target: {fileID: 4165433935084046, guid: 971b8b23d22bf2c419587615cd8acc4a, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4417063332547056, guid: a089a90a79658144e82daa6f4af85b2a, type: 2}
+    - target: {fileID: 4165433935084046, guid: 971b8b23d22bf2c419587615cd8acc4a, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4417063332547056, guid: a089a90a79658144e82daa6f4af85b2a, type: 2}
+    - target: {fileID: 4165433935084046, guid: 971b8b23d22bf2c419587615cd8acc4a, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4417063332547056, guid: a089a90a79658144e82daa6f4af85b2a, type: 2}
+    - target: {fileID: 4165433935084046, guid: 971b8b23d22bf2c419587615cd8acc4a, type: 2}
       propertyPath: m_RootOrder
       value: 27
       objectReference: {fileID: 0}
-    - target: {fileID: 1972949541093666, guid: a089a90a79658144e82daa6f4af85b2a, type: 2}
-      propertyPath: m_Name
-      value: grass-ground-01 (27)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1972949541093666, guid: a089a90a79658144e82daa6f4af85b2a, type: 2}
-      propertyPath: m_Layer
-      value: 2
+    - target: {fileID: 61270962472033726, guid: 971b8b23d22bf2c419587615cd8acc4a,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a089a90a79658144e82daa6f4af85b2a, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: 971b8b23d22bf2c419587615cd8acc4a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1254623468 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4417063332547056, guid: a089a90a79658144e82daa6f4af85b2a,
+  m_CorrespondingSourceObject: {fileID: 4165433935084046, guid: 971b8b23d22bf2c419587615cd8acc4a,
     type: 2}
   m_PrefabInternal: {fileID: 1254623467}
 --- !u!1001 &1264568629
@@ -3158,6 +3155,7 @@ GameObject:
   - component: {fileID: 1871937614}
   - component: {fileID: 1871937616}
   - component: {fileID: 1871937617}
+  - component: {fileID: 1871937618}
   m_Layer: 2
   m_Name: Enemy
   m_TagString: Enemy
@@ -3269,6 +3267,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1871937618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1871937613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6862b1b03df76044393347ae25819481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1901467700
 GameObject:
   m_ObjectHideFlags: 0
@@ -3365,7 +3374,8 @@ MonoBehaviour:
   hp: 10
   raycastDistance: 0.5
   isWarping: 0
-  sceneName: Mechanics Test
+  losingSceneName: Mechanics Test
+  winningSceneName: Level 02
 --- !u!61 &1901467704
 BoxCollider2D:
   m_ObjectHideFlags: 0
