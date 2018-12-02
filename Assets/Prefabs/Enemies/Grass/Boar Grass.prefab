@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114946545326791490}
   - component: {fileID: 95203561762156528}
   m_Layer: 0
-  m_Name: Boar
+  m_Name: Boar Grass
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   directions:
   - {x: 1, y: 0, z: 0}
   - {x: -1, y: 0, z: 0}
-  speed: 10
+  speed: 3
 --- !u!212 &212676854935467842
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -159,7 +159,7 @@ SpriteRenderer:
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 805f3609bb358a14ab43a2e7937521bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
