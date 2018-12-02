@@ -1615,11 +1615,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114198769050353200, guid: 1303224e639ce92458b427dcaab7c4df,
-        type: 2}
-      propertyPath: sounds.Array.size
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4488141202506938, guid: 1303224e639ce92458b427dcaab7c4df, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1651,61 +1646,6 @@ Prefab:
     - target: {fileID: 4488141202506938, guid: 1303224e639ce92458b427dcaab7c4df, type: 2}
       propertyPath: m_RootOrder
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114198769050353200, guid: 1303224e639ce92458b427dcaab7c4df,
-        type: 2}
-      propertyPath: sounds.Array.data[1].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114198769050353200, guid: 1303224e639ce92458b427dcaab7c4df,
-        type: 2}
-      propertyPath: sounds.Array.data[2].name
-      value: Goat 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114198769050353200, guid: 1303224e639ce92458b427dcaab7c4df,
-        type: 2}
-      propertyPath: sounds.Array.data[2].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: bc75e941dd61ac24baaac6cd850fa801, type: 3}
-    - target: {fileID: 114198769050353200, guid: 1303224e639ce92458b427dcaab7c4df,
-        type: 2}
-      propertyPath: sounds.Array.data[2].volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114198769050353200, guid: 1303224e639ce92458b427dcaab7c4df,
-        type: 2}
-      propertyPath: sounds.Array.data[2].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114198769050353200, guid: 1303224e639ce92458b427dcaab7c4df,
-        type: 2}
-      propertyPath: sounds.Array.data[2].loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114198769050353200, guid: 1303224e639ce92458b427dcaab7c4df,
-        type: 2}
-      propertyPath: sounds.Array.data[3].name
-      value: Goat 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114198769050353200, guid: 1303224e639ce92458b427dcaab7c4df,
-        type: 2}
-      propertyPath: sounds.Array.data[3].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: f200975ce1e26204dadc805fff8f22a3, type: 3}
-    - target: {fileID: 114198769050353200, guid: 1303224e639ce92458b427dcaab7c4df,
-        type: 2}
-      propertyPath: sounds.Array.data[3].volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114198769050353200, guid: 1303224e639ce92458b427dcaab7c4df,
-        type: 2}
-      propertyPath: sounds.Array.data[3].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114198769050353200, guid: 1303224e639ce92458b427dcaab7c4df,
-        type: 2}
-      propertyPath: sounds.Array.data[3].loop
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1303224e639ce92458b427dcaab7c4df, type: 2}

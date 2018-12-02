@@ -309,6 +309,11 @@ Prefab:
       propertyPath: hp
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114619538771554722, guid: 7545ad15a37991341853882f50a016c7,
+        type: 2}
+      propertyPath: goal
+      value: 
+      objectReference: {fileID: 471887674}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7545ad15a37991341853882f50a016c7, type: 2}
   m_IsPrefabAsset: 0
@@ -1133,6 +1138,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1e13321074d49648a53eed5bfa2d043, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &471887674 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114723452768691784, guid: c1e13321074d49648a53eed5bfa2d043,
+    type: 2}
+  m_PrefabInternal: {fileID: 471887673}
+  m_Script: {fileID: 11500000, guid: 5b0986c2194283b438dffbc9472dc293, type: 3}
 --- !u!1001 &525984001
 Prefab:
   m_ObjectHideFlags: 0
@@ -2178,9 +2189,9 @@ Transform:
   - {fileID: 946232396}
   - {fileID: 784251548}
   - {fileID: 1321603999}
-  - {fileID: 1278751035}
-  - {fileID: 1600867063}
   - {fileID: 802746041}
+  - {fileID: 1600867063}
+  - {fileID: 1278751035}
   - {fileID: 601555565}
   - {fileID: 669140746}
   - {fileID: 617660169}

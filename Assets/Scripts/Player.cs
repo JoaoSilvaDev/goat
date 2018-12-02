@@ -42,6 +42,8 @@ public class Player : MonoBehaviour
         _collider = GetComponent<BoxCollider2D>();
         _gameManager = FindObjectOfType<GameManager>();
 
+        goal = FindObjectOfType<GoalManager>();
+
         Scene scene = SceneManager.GetActiveScene();
 
         int levelIndex =  int.Parse (scene.name.Substring(scene.name.Length - 2));
