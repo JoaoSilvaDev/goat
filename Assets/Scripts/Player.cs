@@ -60,13 +60,13 @@ public class Player : MonoBehaviour
         if (!_isMoving)
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow) && leftCast.collider == null)
-                _input.x = -1;
+                _input.x = -0.95f;
             else if (Input.GetKeyDown(KeyCode.RightArrow) && rightCast.collider == null)
-                _input.x = 1;
+                _input.x = 0.95f;
             else if (Input.GetKeyDown(KeyCode.UpArrow) && upCast.collider == null)
-                _input.y = 1;
+                _input.y = 0.95f;
             else if (Input.GetKeyDown(KeyCode.DownArrow) && downCast.collider == null)
-                _input.y = -1;
+                _input.y = -0.95f;
             else
             {
                 _input.x = 0;
@@ -119,7 +119,7 @@ public class Player : MonoBehaviour
         startPos = entity.position;
         _time = 0.0f;
 
-        endPos = new Vector3(startPos.x + System.Math.Sign(_input.x), startPos.y + System.Math.Sign(_input.y), startPos.z);
+        endPos = new Vector3(startPos.x + _input.x, startPos.y + _input.y, startPos.z);
 
         while (_time < 1.0f && !isWarping)
         {
