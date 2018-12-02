@@ -34,6 +34,18 @@ public class Player : MonoBehaviour
         _canvas = FindObjectOfType<CanvasManager>();
         _collider = GetComponent<BoxCollider2D>();
         _gameManager = FindObjectOfType<GameManager>();
+
+        Scene scene = SceneManager.GetActiveScene();
+
+        int levelIndex =  int.Parse (scene.name.Substring(scene.name.Length - 2));
+        int nextLevel = levelIndex + 1;
+
+        losingSceneName = scene.name;
+
+        if(nextLevel < 10)
+            winningSceneName = "Level 0" + nextLevel.ToString();
+        else
+            winningSceneName = "Level " + nextLevel.ToString();
     }
 
     void Update()
