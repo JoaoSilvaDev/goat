@@ -19,10 +19,10 @@ public class Player : MonoBehaviour
 
     public bool isWarping;
     private bool _nextIsGoal = false;
-    public bool nextIsWolf = false;
+    public bool nextIsEnemy = false;
 
     public string losingSceneName;
-    public string winningSceneName;
+    private string _winningSceneName;
 
     private GameManager _gameManager;
     public WarpManager warpManager;
@@ -52,9 +52,9 @@ public class Player : MonoBehaviour
         losingSceneName = scene.name;
 
         if(nextLevel < 10)
-            winningSceneName = "Level 0" + nextLevel.ToString();
+            _winningSceneName = "Level 0" + nextLevel.ToString();
         else
-            winningSceneName = "Level " + nextLevel.ToString();
+            _winningSceneName = "Level " + nextLevel.ToString();
     }
 
     void Update()
@@ -95,22 +95,22 @@ public class Player : MonoBehaviour
                     else if (leftCast.collider.CompareTag("Goal"))
                     {
                         _nextIsGoal = true;
-                        nextIsWolf = false;
+                        nextIsEnemy = false;
                         _input.x = -0.95f;
                     }
                     else if (leftCast.collider.CompareTag("Warp"))
                     {
-                        nextIsWolf = false;
+                        nextIsEnemy = false;
                         _input.x = -0.95f;
                     }
                     else if (leftCast.collider.CompareTag("Sand"))
                     {
-                        nextIsWolf = false;
+                        nextIsEnemy = false;
                         _input.x = -0.95f;
                     }
                     else if (leftCast.collider.CompareTag("Enemy"))
                     {
-                        nextIsWolf = true;
+                        nextIsEnemy = true;
                         _input.x = -0.95f;
                     }                    
                 }                    
@@ -126,22 +126,22 @@ public class Player : MonoBehaviour
                     else if (rightCast.collider.CompareTag("Goal"))
                     {
                         _nextIsGoal = true;
-                        nextIsWolf = false;
+                        nextIsEnemy = false;
                         _input.x = 0.95f;
                     }
                     else if (rightCast.collider.CompareTag("Warp"))
                     {
-                        nextIsWolf = false;
+                        nextIsEnemy = false;
                         _input.x = 0.95f;
                     }
                     else if (rightCast.collider.CompareTag("Sand"))
                     {
-                        nextIsWolf = false;
+                        nextIsEnemy = false;
                         _input.x = 0.95f;
                     }
                     else if (rightCast.collider.CompareTag("Enemy"))
                     {
-                        nextIsWolf = true;
+                        nextIsEnemy = true;
                         _input.x = 0.95f;
                     }
                 }
@@ -157,22 +157,22 @@ public class Player : MonoBehaviour
                     else if (upCast.collider.CompareTag("Goal"))
                     {
                         _nextIsGoal = true;
-                        nextIsWolf = false;
+                        nextIsEnemy = false;
                         _input.y = 0.95f;
                     }
                     else if (upCast.collider.CompareTag("Warp"))
                     {
-                        nextIsWolf = false;
+                        nextIsEnemy = false;
                         _input.y = 0.95f;
                     }
                     else if (upCast.collider.CompareTag("Sand"))
                     {
-                        nextIsWolf = false;
+                        nextIsEnemy = false;
                         _input.y = 0.95f;
                     }
                     else if (upCast.collider.CompareTag("Enemy"))
                     {                        
-                        nextIsWolf = true;
+                        nextIsEnemy = true;
                         _input.y = 0.95f;
                     }
                 }
@@ -188,22 +188,22 @@ public class Player : MonoBehaviour
                     else if (downCast.collider.CompareTag("Goal"))
                     {
                         _nextIsGoal = true;
-                        nextIsWolf = false;
+                        nextIsEnemy = false;
                         _input.y = -0.95f;
                     }
                     else if (downCast.collider.CompareTag("Warp"))
                     {
-                        nextIsWolf = false;
+                        nextIsEnemy = false;
                         _input.y = -0.95f;
                     }
                     else if (downCast.collider.CompareTag("Sand"))
                     {
-                        nextIsWolf = false;
+                        nextIsEnemy = false;
                         _input.y = -0.95f;
                     }
                     else if (downCast.collider.CompareTag("Enemy"))
                     {
-                        nextIsWolf = true;
+                        nextIsEnemy = true;
                         _input.y = -0.95f;
                     }
                 }
@@ -234,7 +234,7 @@ public class Player : MonoBehaviour
                     _canvas.UpdateHP();
                 }
 
-                if (nextIsWolf)
+                if (nextIsEnemy)
                     _collider.enabled = false;
             }
         }
@@ -337,17 +337,17 @@ public class Player : MonoBehaviour
         _canvas.InitEndLevelSequence();
         isMoving = true;
         yield return new WaitForSeconds(1.0f);
-        if (winningSceneName == "Level 15")
+        if (_winningSceneName == "Level 15")
         {
             FindObjectOfType<AudioManager>().Stop("Goat 1");
             FindObjectOfType<AudioManager>().Play("Goat 2");
         }
-        else if (winningSceneName == "Level 29")
+        else if (_winningSceneName == "Level 29")
         {
             FindObjectOfType<AudioManager>().Stop("Goat 2");
             FindObjectOfType<AudioManager>().Play("Goat 3");
         }
-        SceneManager.LoadScene(winningSceneName, LoadSceneMode.Single);
+        SceneManager.LoadScene(_winningSceneName, LoadSceneMode.Single);
     }
 
 
