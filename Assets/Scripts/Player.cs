@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class Player : MonoBehaviour
     private BoxCollider2D _collider;
 
     public bool isWarping;
+
+    public string sceneName;
 
     enum Direction
     {
@@ -130,5 +133,18 @@ public class Player : MonoBehaviour
 
         _isMoving = false;
         yield return 0;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            GameOver();
+        }
+    }
+
+    void GameOver()
+    {
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 }
