@@ -9,6 +9,7 @@ public class CanvasManager : MonoBehaviour
     void Start()
     {
         _player = FindObjectOfType<Player>();
+        UpdateHP();
     }
 
     public void UpdateHP()

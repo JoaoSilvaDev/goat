@@ -21,13 +21,14 @@ public class Player : MonoBehaviour
     private BoxCollider2D _collider;
 
     public bool isWarping;
-    private bool _nextIsHP = false;
+    private bool _nextIsGoal = false;
+    public bool nextIsWolf = false;
 
     public string losingSceneName;
     public string winningSceneName;
 
     private GameManager _gameManager;
-    public GameObject goal;
+    public WarpManager warpManager;
 
     enum Direction
     {
@@ -79,9 +80,25 @@ public class Player : MonoBehaviour
                         _input.x = 0.0f;
                     else if (leftCast.collider.CompareTag("Goal"))
                     {
-                        _nextIsHP = true;
+                        _nextIsGoal = true;
+                        nextIsWolf = false;
                         _input.x = -0.95f;
-                    }                        
+                    }
+                    else if (leftCast.collider.CompareTag("Warp"))
+                    {
+                        nextIsWolf = false;
+                        _input.x = -0.95f;
+                    }
+                    else if (leftCast.collider.CompareTag("Sand"))
+                    {
+                        nextIsWolf = false;
+                        _input.x = -0.95f;
+                    }
+                    else if (leftCast.collider.CompareTag("Enemy"))
+                    {
+                        nextIsWolf = true;
+                        _input.x = -0.95f;
+                    }
                 }                    
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -94,7 +111,23 @@ public class Player : MonoBehaviour
                         _input.x = 0.0f;
                     else if (rightCast.collider.CompareTag("Goal"))
                     {
-                        _nextIsHP = true;
+                        _nextIsGoal = true;
+                        nextIsWolf = false;
+                        _input.x = 0.95f;
+                    }
+                    else if (rightCast.collider.CompareTag("Warp"))
+                    {
+                        nextIsWolf = false;
+                        _input.x = 0.95f;
+                    }
+                    else if (rightCast.collider.CompareTag("Sand"))
+                    {
+                        nextIsWolf = false;
+                        _input.x = 0.95f;
+                    }
+                    else if (rightCast.collider.CompareTag("Enemy"))
+                    {
+                        nextIsWolf = true;
                         _input.x = 0.95f;
                     }
                 }
@@ -109,7 +142,23 @@ public class Player : MonoBehaviour
                         _input.y = 0.0f;
                     else if (upCast.collider.CompareTag("Goal"))
                     {
-                        _nextIsHP = true;
+                        _nextIsGoal = true;
+                        nextIsWolf = false;
+                        _input.y = 0.95f;
+                    }
+                    else if (upCast.collider.CompareTag("Warp"))
+                    {
+                        nextIsWolf = false;
+                        _input.y = 0.95f;
+                    }
+                    else if (upCast.collider.CompareTag("Sand"))
+                    {
+                        nextIsWolf = false;
+                        _input.y = 0.95f;
+                    }
+                    else if (upCast.collider.CompareTag("Enemy"))
+                    {                        
+                        nextIsWolf = true;
                         _input.y = 0.95f;
                     }
                 }
@@ -124,7 +173,23 @@ public class Player : MonoBehaviour
                         _input.y = 0.0f;
                     else if (downCast.collider.CompareTag("Goal"))
                     {
-                        _nextIsHP = true;
+                        _nextIsGoal = true;
+                        nextIsWolf = false;
+                        _input.y = -0.95f;
+                    }
+                    else if (downCast.collider.CompareTag("Warp"))
+                    {
+                        nextIsWolf = false;
+                        _input.y = -0.95f;
+                    }
+                    else if (downCast.collider.CompareTag("Sand"))
+                    {
+                        nextIsWolf = false;
+                        _input.y = -0.95f;
+                    }
+                    else if (downCast.collider.CompareTag("Enemy"))
+                    {
+                        nextIsWolf = true;
                         _input.y = -0.95f;
                     }
                 }
@@ -169,11 +234,14 @@ public class Player : MonoBehaviour
 
                 StartCoroutine(Move(transform));
 
-                if (!_nextIsHP)
+                if (!_nextIsGoal)
                 {
                     hp -= 1;
                     _canvas.UpdateHP();
                 }
+
+                if (nextIsWolf)
+                    _collider.enabled = false;
             }
         }
     }
@@ -192,8 +260,9 @@ public class Player : MonoBehaviour
             _time += Time.deltaTime * speed;
             entity.position = Vector3.Lerp(startPos, endPos, _time);
             yield return null;
-        }        
-        
+        }
+
+        _collider.enabled = true;
         _isMoving = false;
         yield return 0;
     }
@@ -208,7 +277,27 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(Winning());
         }
-    }    
+        if (collision.CompareTag("Warp") && warpManager.activatedWarp.GetComponent<Warp>().canEnter)
+        {
+            StartCoroutine(WarpEnter(collision.gameObject));
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Sand"))
+        {
+            collision.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+            collision.gameObject.layer = LayerMask.NameToLayer("Default");
+            collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(collision.gameObject.GetComponent<Rigidbody2D>());
+            collision.gameObject.tag = "Walls";
+        }
+        if (collision.CompareTag("Warp"))
+        {
+            StartCoroutine(WarpExit(collision.gameObject));            
+        }
+    }
 
     IEnumerator GameOver()
     {
@@ -224,5 +313,28 @@ public class Player : MonoBehaviour
         _isMoving = true;
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene(winningSceneName, LoadSceneMode.Single);
+    }
+
+
+    IEnumerator WarpEnter(GameObject activatedWarp)
+    {
+        warpManager.activatedWarp = activatedWarp;
+        //play animation
+        yield return new WaitForSeconds(0.2f/*animation to end*/);
+        print(activatedWarp.name + " - Enter");
+        isWarping = true;
+        warpManager.target.GetComponent<Warp>().canEnter = false;
+        warpManager.activatedWarp = warpManager.target;
+        transform.position = warpManager.target.transform.position;
+    }
+
+    IEnumerator WarpExit(GameObject activatedWarp)
+    {
+        //play animation
+        yield return new WaitForSeconds(0.2f/*animation to end*/);
+        print(activatedWarp.gameObject.name + " - Exit");
+        isWarping = false;
+        warpManager.activatedWarp = warpManager.target;
+        warpManager.activatedWarp.GetComponent<Warp>().canEnter = true;
     }
 }

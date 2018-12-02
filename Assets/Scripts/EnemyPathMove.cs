@@ -12,15 +12,13 @@ public class EnemyPathMove : Enemy
     Vector3 startPos, endPos;
     private float _time;
     public float speed;
-	
-	public override void Move()
+
+    public override void Move()
 	{
 		index++;
 
         if(index > directions.Count-1)
-            index = 0;
-        
-        Debug.Log(_input);
+            index = 0;       
 
 		_input = directions[index];
 		StartCoroutine(Move(transform));
@@ -39,7 +37,7 @@ public class EnemyPathMove : Enemy
             _time += Time.deltaTime * speed;
             entity.position = Vector3.Lerp(startPos, endPos, _time);
             yield return null;
-        }
+        }        
 
         _isMoving = false;
         yield return 0;

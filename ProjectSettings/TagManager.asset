@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Goal
   - Sand
+  - Warp
   layers:
   - Default
   - TransparentFX
