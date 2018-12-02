@@ -2,8 +2,8 @@
 
 public class Enemy : MonoBehaviour
 {
-    public void Move()
+    public virtual void Move()
     {
-
+        Debug.Log("MOve");
     }
 }
