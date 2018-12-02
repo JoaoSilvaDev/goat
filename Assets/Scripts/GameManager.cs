@@ -7,5 +7,6 @@ public class GameManager : MonoBehaviour
     public void CallForMove()
     {
         enemies.GetComponentInChildren<Enemy>().Move();
+        print("CALL FOR MOVE");
     }
 }
