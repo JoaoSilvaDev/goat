@@ -32,7 +32,7 @@ public class CanvasManager : MonoBehaviour
 
     public void UpdateHP()
     {
-        hpText.text = "hp: " + _player.hp;
+        hpText.text = "x" + _player.hp;
     }
 
     public void InitEndLevelSequence()
