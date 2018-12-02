@@ -59,6 +59,8 @@ public class Player : MonoBehaviour
     {
         if (hp <= 0)
             StartCoroutine(GameOver());
+        if (Input.GetKeyDown(KeyCode.R))
+            StartCoroutine(GameOver());
     }
 
     void FixedUpdate()
@@ -316,7 +318,7 @@ public class Player : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Death");
             _deathHasPlayed = true;
         }        
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(1.5f);
         isMoving = true;
         SceneManager.LoadScene(losingSceneName, LoadSceneMode.Single);
     }
