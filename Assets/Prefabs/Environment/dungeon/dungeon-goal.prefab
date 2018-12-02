@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4735910229322354}
   - component: {fileID: 114723452768691784}
   m_Layer: 0
-  m_Name: Goal
+  m_Name: dungeon-goal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195,7 +195,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300018, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
+  m_Sprite: {fileID: 21300062, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -241,7 +241,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 21300020, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
+  m_Sprite: {fileID: 21300064, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
