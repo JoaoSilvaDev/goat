@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
                     {
                         nextIsWolf = true;
                         _input.x = -0.95f;
-                    }
+                    }                    
                 }                    
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -328,7 +328,6 @@ public class Player : MonoBehaviour
         warpManager.activatedWarp = activatedWarp;
         //play animation
         yield return new WaitForSeconds(0.2f/*animation to end*/);
-        print(activatedWarp.name + " - Enter");
         isWarping = true;
         warpManager.target.GetComponent<Warp>().canEnter = false;
         warpManager.activatedWarp = warpManager.target;
@@ -339,7 +338,6 @@ public class Player : MonoBehaviour
     {
         //play animation
         yield return new WaitForSeconds(0.2f/*animation to end*/);
-        print(activatedWarp.gameObject.name + " - Exit");
         isWarping = false;
         warpManager.activatedWarp = warpManager.target;
         warpManager.activatedWarp.GetComponent<Warp>().canEnter = true;

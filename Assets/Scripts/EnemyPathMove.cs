@@ -24,7 +24,7 @@ public class EnemyPathMove : Enemy
 		StartCoroutine(Move(transform));
 	}
 
-	IEnumerator Move(Transform entity)
+    IEnumerator Move(Transform entity)
     {
         _isMoving = true;
         startPos = entity.position;
@@ -37,7 +37,22 @@ public class EnemyPathMove : Enemy
             _time += Time.deltaTime * speed;
             entity.position = Vector3.Lerp(startPos, endPos, _time);
             yield return null;
-        }        
+        }
+
+        if (index + 1 > directions.Count - 1)
+        {
+            if (directions[0].x > 0)
+                GetComponent<SpriteRenderer>().flipX = true;
+            if (directions[0].x < 0)
+                GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else
+        {
+            if (directions[index + 1].x > 0)
+                GetComponent<SpriteRenderer>().flipX = true;
+            if (directions[index + 1].x < 0)
+                GetComponent<SpriteRenderer>().flipX = false;
+        }
 
         _isMoving = false;
         yield return 0;
