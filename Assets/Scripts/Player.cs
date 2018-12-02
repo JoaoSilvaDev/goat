@@ -31,6 +31,11 @@ public class Player : MonoBehaviour
 
     public Sprite sandSprite;
 
+    private bool _deathHasPlayed;
+    private bool _keyHasPlayed;
+    private bool _teleportHasPlayed;
+    private bool _goalHasPlayed;
+
     void Start()
     {
         _canvas = FindObjectOfType<CanvasManager>();
@@ -240,14 +245,16 @@ public class Player : MonoBehaviour
         endPos = new Vector3(startPos.x + _input.x, startPos.y + _input.y, startPos.z);
         _gameManager.CallForMove();
 
+        FindObjectOfType<AudioManager>().Play("Move");
+
         while (_time < 1.0f && !isWarping && hp >= 0)
         {
-            GetComponent<Animator>().SetBool("jump", true);
+            GetComponent<Animator>().SetBool("jump", true);            
             _time += Time.deltaTime * speed;
             entity.position = Vector3.Lerp(startPos, endPos, _time);
             yield return null;
         }
-
+        
         GetComponent<Animator>().SetBool("jump", false);
         _collider.enabled = true;
         isMoving = false;
@@ -266,10 +273,20 @@ public class Player : MonoBehaviour
         }
         if (collision.CompareTag("Warp") && warpManager.activatedWarp.GetComponent<Warp>().canEnter)
         {
+            if (!_teleportHasPlayed)
+            {
+                FindObjectOfType<AudioManager>().Play("Teleport");
+                _teleportHasPlayed = true;
+            }
             StartCoroutine(WarpEnter(collision.gameObject));
         }
         if (collision.CompareTag("Key"))
         {
+            if (!_keyHasPlayed)
+            {
+                FindObjectOfType<AudioManager>().Play("Key");
+                _keyHasPlayed = true;
+            }
             Destroy(collision.gameObject);
             goal.ActivateGoal();
         }
@@ -294,6 +311,11 @@ public class Player : MonoBehaviour
     IEnumerator GameOver()
     {
         GetComponent<Animator>().SetTrigger("dead");
+        if (!_deathHasPlayed)
+        {
+            FindObjectOfType<AudioManager>().Play("Death");
+            _deathHasPlayed = true;
+        }        
         yield return new WaitForSeconds(1.0f);
         isMoving = true;
         SceneManager.LoadScene(losingSceneName, LoadSceneMode.Single);
@@ -302,19 +324,33 @@ public class Player : MonoBehaviour
     IEnumerator Winning()
     {
         GetComponent<Animator>().SetTrigger("nextLevel");
+        if (!_goalHasPlayed)
+        {
+            FindObjectOfType<AudioManager>().Play("Goal");
+            _goalHasPlayed = true;
+        }
         yield return new WaitForSeconds(1.0f);
         _canvas.InitEndLevelSequence();
         isMoving = true;
         yield return new WaitForSeconds(1.0f);
+        if (winningSceneName == "Level 15")
+        {
+            FindObjectOfType<AudioManager>().Stop("Goat 1");
+            FindObjectOfType<AudioManager>().Play("Goat 2");
+        }
+        else if (winningSceneName == "Level 29")
+        {
+            FindObjectOfType<AudioManager>().Stop("Goat 2");
+            FindObjectOfType<AudioManager>().Play("Goat 3");
+        }
         SceneManager.LoadScene(winningSceneName, LoadSceneMode.Single);
     }
 
 
     IEnumerator WarpEnter(GameObject activatedWarp)
     {
-        warpManager.activatedWarp = activatedWarp;
-        //play animation
-        yield return new WaitForSeconds(0.2f/*animation to end*/);
+        warpManager.activatedWarp = activatedWarp;        
+        yield return new WaitForSeconds(0.2f);
         isWarping = true;
         warpManager.target.GetComponent<Warp>().canEnter = false;
         warpManager.activatedWarp = warpManager.target;
@@ -323,8 +359,7 @@ public class Player : MonoBehaviour
 
     IEnumerator WarpExit(GameObject activatedWarp)
     {
-        //play animation
-        yield return new WaitForSeconds(0.2f/*animation to end*/);
+        yield return new WaitForSeconds(0.2f);
         isWarping = false;
         warpManager.activatedWarp = warpManager.target;
         warpManager.activatedWarp.GetComponent<Warp>().canEnter = true;

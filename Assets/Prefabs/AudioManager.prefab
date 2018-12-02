@@ -64,3 +64,51 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Goat 2
+    clip: {fileID: 8300000, guid: bc75e941dd61ac24baaac6cd850fa801, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Goat 3
+    clip: {fileID: 8300000, guid: f200975ce1e26204dadc805fff8f22a3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: 61177ce44eecdc64d9a356ecc58cdf71, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Goal
+    clip: {fileID: 8300000, guid: f476db88487d7634baaa34ae5fa8e92c, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Key
+    clip: {fileID: 8300000, guid: 51d54e3c1a531e74eada01bfd1742cc0, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Move
+    clip: {fileID: 8300000, guid: ec902565f457b5947976f81bc25f691a, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Select
+    clip: {fileID: 8300000, guid: 097f81b473b2bf242a16b60354cd57a6, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Teleport
+    clip: {fileID: 8300000, guid: 58c98ad105cc2524fadba3df6b3f7170, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
