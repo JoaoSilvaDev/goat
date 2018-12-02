@@ -3,11 +3,11 @@
 public class GameManager : MonoBehaviour
 {
     public GameObject enemiesParents;
-    Enemy[] enemies = new Enemy[10];
+    Enemy[] enemies = new Enemy[10];    
 
     void Start()
     {
-        if(enemiesParents.transform.childCount > 0)        
+        if (enemiesParents.transform.childCount > 0)        
             enemies = enemiesParents.GetComponentsInChildren<Enemy>();
     }
 
