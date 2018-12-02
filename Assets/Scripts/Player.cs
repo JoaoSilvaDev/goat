@@ -4,15 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    Direction currentDirection;
     private Vector2 _input;
     public bool isMoving = false;
     Vector3 startPos, endPos;
     private float _time;
 
     public float speed;
-
-    public Sprite up, down, left, right;
 
     private CanvasManager _canvas;
     public int hp = 10;
@@ -31,14 +28,6 @@ public class Player : MonoBehaviour
     public WarpManager warpManager;
 
     public GoalManager goal;
-
-    enum Direction
-    {
-        Up,
-        Right,
-        Left,
-        Down
-    }
 
     void Start()
     {
@@ -210,29 +199,9 @@ public class Player : MonoBehaviour
             if (_input != Vector2.zero)
             {
                 if (_input.x < 0)
-                    currentDirection = Direction.Left;
+                    GetComponent<SpriteRenderer>().flipX = false;
                 if (_input.x > 0)
-                    currentDirection = Direction.Right;
-                if (_input.y < 0)
-                    currentDirection = Direction.Down;
-                if (_input.y > 0)
-                    currentDirection = Direction.Up;
-
-                switch (currentDirection)
-                {
-                    case Direction.Up:
-                        GetComponent<SpriteRenderer>().sprite = up;
-                        break;
-                    case Direction.Down:
-                        GetComponent<SpriteRenderer>().sprite = down;
-                        break;
-                    case Direction.Left:
-                        GetComponent<SpriteRenderer>().sprite = left;
-                        break;
-                    case Direction.Right:
-                        GetComponent<SpriteRenderer>().sprite = right;
-                        break;
-                }
+                    GetComponent<SpriteRenderer>().flipX = true;
 
                 StartCoroutine(Move(transform));
 
