@@ -9,6 +9,7 @@ TagManager:
   - Goal
   - Sand
   - Warp
+  - Key
   layers:
   - Default
   - TransparentFX

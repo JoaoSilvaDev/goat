@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
     private GameManager _gameManager;
     public WarpManager warpManager;
 
+    public GoalManager goal;
+
     enum Direction
     {
         Up,
@@ -280,6 +282,11 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("Warp") && warpManager.activatedWarp.GetComponent<Warp>().canEnter)
         {
             StartCoroutine(WarpEnter(collision.gameObject));
+        }
+        if (collision.CompareTag("Key"))
+        {
+            Destroy(collision.gameObject);
+            goal.ActivateGoal();
         }
     }
 
