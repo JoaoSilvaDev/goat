@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CanvasManager : MonoBehaviour
 {
@@ -10,11 +11,23 @@ public class CanvasManager : MonoBehaviour
     public Animator levelBeginTransition;
     public Animator levelEndTransition;
 
-    void Awake()
+    void Start()
     {
         _player = FindObjectOfType<Player>();
         UpdateHP();
         StartCoroutine(BeginLevelSequence());
+
+        Scene scene = SceneManager.GetActiveScene();
+
+        levelBeginTransition.GetComponentInChildren<Text>().text = scene.name;
+        int levelIndex =  int.Parse (scene.name.Substring(scene.name.Length - 2));
+        int nextLevel = levelIndex + 1;
+        if(nextLevel < 10)            
+            levelEndTransition.GetComponentInChildren<Text>().text = "Level 0" + nextLevel.ToString();
+        else
+            levelEndTransition.GetComponentInChildren<Text>().text = "Level " + nextLevel.ToString();
+        
+        GetComponent<Canvas>().worldCamera = Camera.main;
     }
 
     public void UpdateHP()
