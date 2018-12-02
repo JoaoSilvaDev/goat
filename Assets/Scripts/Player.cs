@@ -227,12 +227,14 @@ public class Player : MonoBehaviour
         _gameManager.CallForMove();
 
         while (_time < 1.0f && !isWarping && hp >= 0)
-        {            
+        {
+            GetComponent<Animator>().SetBool("jump", true);
             _time += Time.deltaTime * speed;
             entity.position = Vector3.Lerp(startPos, endPos, _time);
             yield return null;
         }
 
+        GetComponent<Animator>().SetBool("jump", false);
         _collider.enabled = true;
         isMoving = false;
         yield return 0;
@@ -277,14 +279,16 @@ public class Player : MonoBehaviour
 
     IEnumerator GameOver()
     {
-        //play animation
-        isMoving = true;
+        GetComponent<Animator>().SetTrigger("dead");
         yield return new WaitForSeconds(1.0f);
+        isMoving = true;
         SceneManager.LoadScene(losingSceneName, LoadSceneMode.Single);
     }
 
     IEnumerator Winning()
     {
+        GetComponent<Animator>().SetTrigger("nextLevel");
+        yield return new WaitForSeconds(1.0f);
         _canvas.InitEndLevelSequence();
         isMoving = true;
         yield return new WaitForSeconds(1.0f);

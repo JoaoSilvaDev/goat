@@ -327,10 +327,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1856271206337414, guid: 7545ad15a37991341853882f50a016c7, type: 2}
-      propertyPath: m_Name
-      value: Goat
-      objectReference: {fileID: 0}
     - target: {fileID: 114619538771554722, guid: 7545ad15a37991341853882f50a016c7,
         type: 2}
       propertyPath: warpManager
