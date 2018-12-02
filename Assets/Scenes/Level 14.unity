@@ -3538,44 +3538,50 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4351508468879326, guid: 9df5c509eabed9f4bb7819922af054d3, type: 2}
+    - target: {fileID: 4357938154396434, guid: 7545ad15a37991341853882f50a016c7, type: 2}
       propertyPath: m_LocalPosition.x
       value: -2.85
       objectReference: {fileID: 0}
-    - target: {fileID: 4351508468879326, guid: 9df5c509eabed9f4bb7819922af054d3, type: 2}
+    - target: {fileID: 4357938154396434, guid: 7545ad15a37991341853882f50a016c7, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0.95
       objectReference: {fileID: 0}
-    - target: {fileID: 4351508468879326, guid: 9df5c509eabed9f4bb7819922af054d3, type: 2}
+    - target: {fileID: 4357938154396434, guid: 7545ad15a37991341853882f50a016c7, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4351508468879326, guid: 9df5c509eabed9f4bb7819922af054d3, type: 2}
+    - target: {fileID: 4357938154396434, guid: 7545ad15a37991341853882f50a016c7, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4351508468879326, guid: 9df5c509eabed9f4bb7819922af054d3, type: 2}
+    - target: {fileID: 4357938154396434, guid: 7545ad15a37991341853882f50a016c7, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4351508468879326, guid: 9df5c509eabed9f4bb7819922af054d3, type: 2}
+    - target: {fileID: 4357938154396434, guid: 7545ad15a37991341853882f50a016c7, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4351508468879326, guid: 9df5c509eabed9f4bb7819922af054d3, type: 2}
+    - target: {fileID: 4357938154396434, guid: 7545ad15a37991341853882f50a016c7, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4351508468879326, guid: 9df5c509eabed9f4bb7819922af054d3, type: 2}
+    - target: {fileID: 4357938154396434, guid: 7545ad15a37991341853882f50a016c7, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1183126254594910, guid: 9df5c509eabed9f4bb7819922af054d3, type: 2}
-      propertyPath: m_Name
-      value: Goat
+    - target: {fileID: 212568862109969932, guid: 7545ad15a37991341853882f50a016c7,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114619538771554722, guid: 7545ad15a37991341853882f50a016c7,
+        type: 2}
+      propertyPath: hp
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9df5c509eabed9f4bb7819922af054d3, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: 7545ad15a37991341853882f50a016c7, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &2054667877
 Prefab:

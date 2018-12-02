@@ -9,21 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1183126254594910}
+  m_RootGameObject: {fileID: 1856271206337414}
   m_IsPrefabAsset: 1
---- !u!1 &1183126254594910
+--- !u!1 &1856271206337414
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4351508468879326}
-  - component: {fileID: 212005916964419682}
-  - component: {fileID: 114848060038274200}
-  - component: {fileID: 61739342119543156}
-  - component: {fileID: 50981988788166626}
-  - component: {fileID: 95993494795907532}
+  - component: {fileID: 4357938154396434}
+  - component: {fileID: 212568862109969932}
+  - component: {fileID: 114619538771554722}
+  - component: {fileID: 61303550234511430}
+  - component: {fileID: 50664963769548760}
+  - component: {fileID: 95000517861017916}
   m_Layer: 2
   m_Name: Goat
   m_TagString: Player
@@ -31,26 +31,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4351508468879326
+--- !u!4 &4357938154396434
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1183126254594910}
+  m_GameObject: {fileID: 1856271206337414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.85, y: 0.95, z: 0}
+  m_LocalPosition: {x: -2.85, y: -2.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50981988788166626
+--- !u!50 &50664963769548760
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1183126254594910}
+  m_GameObject: {fileID: 1856271206337414}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -64,12 +64,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61739342119543156
+--- !u!61 &61303550234511430
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1183126254594910}
+  m_GameObject: {fileID: 1856271206337414}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -89,13 +89,13 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
---- !u!95 &95993494795907532
+--- !u!95 &95000517861017916
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1183126254594910}
+  m_GameObject: {fileID: 1856271206337414}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 731e7243a56d78944ac5492107c25f7d, type: 2}
@@ -107,12 +107,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114848060038274200
+--- !u!114 &114619538771554722
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1183126254594910}
+  m_GameObject: {fileID: 1856271206337414}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e33bb78034f4544d88b173ff6772b17, type: 3}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMoving: 0
   speed: 3
-  hp: 13
+  hp: 50
   raycastDistance: 0.5
   isWarping: 0
   nextIsEnemy: 0
@@ -128,12 +128,12 @@ MonoBehaviour:
   warpManager: {fileID: 0}
   goal: {fileID: 0}
   sandSprite: {fileID: 21300016, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
---- !u!212 &212005916964419682
+--- !u!212 &212568862109969932
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1183126254594910}
+  m_GameObject: {fileID: 1856271206337414}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
