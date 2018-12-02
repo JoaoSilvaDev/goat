@@ -21,11 +21,13 @@ public class Player : MonoBehaviour
     private BoxCollider2D _collider;
 
     public bool isWarping;
+    private bool _nextIsHP = false;
 
     public string losingSceneName;
     public string winningSceneName;
 
     private GameManager _gameManager;
+    public GameObject goal;
 
     enum Direction
     {
@@ -44,7 +46,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (hp <= 1)
+        if (hp <= 0)
             StartCoroutine(GameOver());
     }
 
@@ -66,19 +68,71 @@ public class Player : MonoBehaviour
         Debug.DrawRay(rightCastVector, Vector2.right * raycastDistance, Color.red);
 
         if (!_isMoving)
-        {
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && leftCast.collider == null)
-                _input.x = -0.95f;
-            else if (Input.GetKeyDown(KeyCode.RightArrow) && rightCast.collider == null)
-                _input.x = 0.95f;
-            else if (Input.GetKeyDown(KeyCode.UpArrow) && upCast.collider == null)
-                _input.y = 0.95f;
-            else if (Input.GetKeyDown(KeyCode.DownArrow) && downCast.collider == null)
-                _input.y = -0.95f;
+        {            
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                if (leftCast.collider == null)
+                    _input.x = -0.95f;
+                else
+                {
+                    if (leftCast.collider.CompareTag("Walls"))
+                        _input.x = 0.0f;
+                    else if (leftCast.collider.CompareTag("Goal"))
+                    {
+                        _nextIsHP = true;
+                        _input.x = -0.95f;
+                    }                        
+                }                    
+            }
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                if (rightCast.collider == null)
+                    _input.x = 0.95f;
+                else
+                {
+                    if (rightCast.collider.CompareTag("Walls"))
+                        _input.x = 0.0f;
+                    else if (rightCast.collider.CompareTag("Goal"))
+                    {
+                        _nextIsHP = true;
+                        _input.x = 0.95f;
+                    }
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                if (upCast.collider == null)
+                    _input.y = 0.95f;
+                else
+                {
+                    if (upCast.collider.CompareTag("Walls"))
+                        _input.y = 0.0f;
+                    else if (upCast.collider.CompareTag("Goal"))
+                    {
+                        _nextIsHP = true;
+                        _input.y = 0.95f;
+                    }
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                if (downCast.collider == null)
+                    _input.y = -0.95f;
+                else
+                {
+                    if (downCast.collider.CompareTag("Walls"))
+                        _input.y = 0.0f;
+                    else if (downCast.collider.CompareTag("Goal"))
+                    {
+                        _nextIsHP = true;
+                        _input.y = -0.95f;
+                    }
+                }
+            }
             else
             {
-                _input.x = 0;
-                _input.y = 0;
+                _input.x = 0.0f;
+                _input.y = 0.0f;
             }
 
             if (Mathf.Abs(_input.x) > Mathf.Abs(_input.y))
@@ -115,8 +169,11 @@ public class Player : MonoBehaviour
 
                 StartCoroutine(Move(transform));
 
-                hp -= 1;
-                _canvas.UpdateHP();
+                if (!_nextIsHP)
+                {
+                    hp -= 1;
+                    _canvas.UpdateHP();
+                }
             }
         }
     }
@@ -130,7 +187,7 @@ public class Player : MonoBehaviour
         endPos = new Vector3(startPos.x + _input.x, startPos.y + _input.y, startPos.z);
         _gameManager.CallForMove();
 
-        while (_time < 1.0f && !isWarping)
+        while (_time < 1.0f && !isWarping && hp >= 0)
         {            
             _time += Time.deltaTime * speed;
             entity.position = Vector3.Lerp(startPos, endPos, _time);
@@ -151,16 +208,7 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(Winning());
         }
-    }
-
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Sand"))
-        {
-            print("Destroyed");
-            Destroy(collision.gameObject);
-        }
-    }
+    }    
 
     IEnumerator GameOver()
     {

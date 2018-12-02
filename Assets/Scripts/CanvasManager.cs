@@ -13,7 +13,6 @@ public class CanvasManager : MonoBehaviour
 
     public void UpdateHP()
     {
-        if (_player.hp > 0)        
-            hpText.text = "hp: " + (_player.hp - 1);
+        hpText.text = "hp: " + _player.hp;
     }
 }
