@@ -29,6 +29,8 @@ public class Player : MonoBehaviour
 
     public GoalManager goal;
 
+    public Sprite sandSprite;
+
     void Start()
     {
         _canvas = FindObjectOfType<CanvasManager>();
@@ -267,7 +269,7 @@ public class Player : MonoBehaviour
         {
             collision.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
             collision.gameObject.layer = LayerMask.NameToLayer("Default");
-            collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            collision.gameObject.GetComponent<SpriteRenderer>().sprite = sandSprite;
             Destroy(collision.gameObject.GetComponent<Rigidbody2D>());
             collision.gameObject.tag = "Walls";
         }

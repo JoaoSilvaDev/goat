@@ -616,6 +616,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4417063332547056, guid: a089a90a79658144e82daa6f4af85b2a,
     type: 2}
   m_PrefabInternal: {fileID: 310493914}
+--- !u!1 &338647450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1009503250531402, guid: 0f616a1aea3b4fd4986ff257feb71e6b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1613015447}
+--- !u!95 &338647451
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338647450}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: caba3d4b0b26797418c6a615e5d7e5b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &433018531
 Prefab:
   m_ObjectHideFlags: 0
@@ -2753,29 +2776,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4633895273725856, guid: 4be77485522d57843bae49363f5f334b,
     type: 2}
   m_PrefabInternal: {fileID: 1493688375}
---- !u!1 &1493688377 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1749002365299534, guid: 4be77485522d57843bae49363f5f334b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1493688375}
---- !u!95 &1493688378
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1493688377}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 73a74a25aa6910a4bb62a18c4ef7924d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1501597102
 Prefab:
   m_ObjectHideFlags: 0
@@ -3054,6 +3054,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 212001139175908482, guid: 0f616a1aea3b4fd4986ff257feb71e6b,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 15a9e1b7d9fe5dc4b92e40a20932527f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f616a1aea3b4fd4986ff257feb71e6b, type: 2}
   m_IsPrefabAsset: 0
