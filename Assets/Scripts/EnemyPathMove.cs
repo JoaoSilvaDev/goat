@@ -35,6 +35,7 @@ public class EnemyPathMove : Enemy
         while (_time < 1.0f)
         {
             _time += Time.deltaTime * speed;
+            GetComponent<Animator>().SetBool("jump", true);
             entity.position = Vector3.Lerp(startPos, endPos, _time);
             yield return null;
         }
@@ -54,6 +55,7 @@ public class EnemyPathMove : Enemy
                 GetComponent<SpriteRenderer>().flipX = false;
         }
 
+        GetComponent<Animator>().SetBool("jump", false);
         _isMoving = false;
         yield return 0;
     }

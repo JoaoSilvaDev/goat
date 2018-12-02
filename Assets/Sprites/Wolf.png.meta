@@ -1,37 +1,28 @@
 fileFormatVersion: 2
-guid: 69e721e5280a97a4e8b85c5267a34c8d
+guid: b1abbbcefd5a34a49b0034267380f6b4
 TextureImporter:
   fileIDToRecycleName:
-    21300000: GOAT_0
-    21300002: GOAT_1
-    21300004: GOAT_2
-    21300006: GOAT_3
-    21300008: GOAT_4
-    21300010: GOAT_5
-    21300012: GOAT_6
-    21300014: GOAT_7
-    21300016: GOAT_8
-    21300018: GOAT_9
-    21300020: GOAT_10
-    21300022: GOAT_11
-    21300024: GOAT_12
-    21300026: GOAT_13
-    21300028: GOAT_14
-    21300030: GOAT_15
-    21300032: GOAT_16
-    21300034: GOAT_17
-    21300036: GOAT_18
-    21300038: GOAT_19
-    21300040: GOAT_20
-    21300042: GOAT_21
-    21300044: GOAT_22
-    21300046: GOAT_23
-    21300048: GOAT_24
-    21300050: GOAT_25
-    21300052: GOAT_26
-    21300054: GOAT_27
-    21300056: GOAT_28
-    21300058: GOAT_29
+    21300000: WOOF_0
+    21300002: WOOF_1
+    21300004: WOOF_2
+    21300006: WOOF_3
+    21300008: WOOF_4
+    21300010: WOOF_5
+    21300012: WOOF_6
+    21300014: WOOF_7
+    21300016: WOOF_8
+    21300018: WOOF_9
+    21300020: WOOF_10
+    21300022: WOOF_11
+    21300024: WOOF_12
+    21300026: WOOF_13
+    21300028: WOOF_14
+    21300030: WOOF_15
+    21300032: WOOF_16
+    21300034: WOOF_17
+    21300036: WOOF_18
+    21300038: WOOF_19
+    21300040: WOOF_20
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -147,7 +138,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GOAT_0
+      name: WOOF_0
       rect:
         serializedVersion: 2
         x: 0
@@ -161,13 +152,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba2d9ad98c00f6f46b7d1044213f0b28
+      spriteID: 55b215debc1e3424c9386db3e02f84de
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_1
+      name: WOOF_1
       rect:
         serializedVersion: 2
         x: 28
@@ -181,13 +172,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdebc7d4e8f476447880ea437fd64b7a
+      spriteID: 9597567c297159e4ea5811c178985136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_2
+      name: WOOF_2
       rect:
         serializedVersion: 2
         x: 56
@@ -201,13 +192,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f037661d516681469c1330e52fbb8b3
+      spriteID: a3d23de969cfaac4dbf805a19beec083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_3
+      name: WOOF_3
       rect:
         serializedVersion: 2
         x: 84
@@ -221,13 +212,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d81efec6d160c1d4ca45d0ff0d4ddbd5
+      spriteID: 8f195472de73d1c4abf654e9745474d3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_4
+      name: WOOF_4
       rect:
         serializedVersion: 2
         x: 0
@@ -241,13 +232,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c8647319c363d84ca269163b20b8790
+      spriteID: 95f68119737fb84448674c359573d3a6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_5
+      name: WOOF_5
       rect:
         serializedVersion: 2
         x: 28
@@ -261,13 +252,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 717fdcb11edef384f893824df9a083b1
+      spriteID: 2d2b7b3069072784b8fa73569d884bf0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_6
+      name: WOOF_6
       rect:
         serializedVersion: 2
         x: 56
@@ -281,33 +272,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2891887cd8a49af4eaa0acd07f3e3352
+      spriteID: 2d70cf941ca72fc4a9b7994129288331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_7
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 168
-        width: 28
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01455659a98d2184c86eb6baebe84538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GOAT_8
+      name: WOOF_7
       rect:
         serializedVersion: 2
         x: 0
@@ -321,13 +292,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc9ec0f322114c948a3d901e6c258e28
+      spriteID: 41ad34da6f8a64946b93d9dce5ff818a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_9
+      name: WOOF_8
       rect:
         serializedVersion: 2
         x: 28
@@ -341,13 +312,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a2c665486fc99c46ab74c372d50a372
+      spriteID: 781b00d9bcc0ce14d83f0f8e28d9bbfe
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_10
+      name: WOOF_9
       rect:
         serializedVersion: 2
         x: 56
@@ -361,13 +332,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89afc9dc0fab34f468a6282bb08e4100
+      spriteID: 821bafc324c915e4b98b3c4bce9a5380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_11
+      name: WOOF_10
       rect:
         serializedVersion: 2
         x: 84
@@ -381,13 +352,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0aa65d37dfcc2d4d9f39dce25dfd582
+      spriteID: 8baed82bed1c9db4789a5770266e7950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_12
+      name: WOOF_11
       rect:
         serializedVersion: 2
         x: 0
@@ -401,13 +372,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5356732cbbf92b44fbfc7c7602044a8b
+      spriteID: 2d0525ace89b8e541916ad8eab502dfe
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_13
+      name: WOOF_12
       rect:
         serializedVersion: 2
         x: 28
@@ -421,13 +392,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03f7302c3e4df7045867012b146261ff
+      spriteID: b43e5a6d9ad5ca549a452b0b9907f7e7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_14
+      name: WOOF_13
       rect:
         serializedVersion: 2
         x: 56
@@ -441,33 +412,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12aa9d7658b03ab43b7605ccbc427a8b
+      spriteID: 877726fbbeb129c4e9f29929373eb8c6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_15
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 112
-        width: 28
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd8626b5427ab7140a0cc777d7695b75
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GOAT_16
+      name: WOOF_14
       rect:
         serializedVersion: 2
         x: 0
@@ -481,13 +432,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4f7065b14ba7ae4fbfb1944894131e1
+      spriteID: 2095a86471bb3904fb4de1de583c0104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_17
+      name: WOOF_15
       rect:
         serializedVersion: 2
         x: 28
@@ -501,13 +452,53 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0208faf2fdee32146ab25b3f81376894
+      spriteID: 889e5685a23ac43409a117fde1c2e9f7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_18
+      name: WOOF_16
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 84
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a809e6a91cdc44895cab30a366f9ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WOOF_17
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 84
+        width: 28
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc90234f2e805c419b3f69341da62e4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WOOF_18
       rect:
         serializedVersion: 2
         x: 0
@@ -521,13 +512,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4496baa71401a434893f287a2bc95be9
+      spriteID: 0fa708f7f47191f47acaf7ad16ff299c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_19
+      name: WOOF_19
       rect:
         serializedVersion: 2
         x: 28
@@ -541,13 +532,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0467de0dbdc15e4582297df6bb3399d
+      spriteID: 7c46f83a8bbbb254094670f2f3f6c6a5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GOAT_20
+      name: WOOF_20
       rect:
         serializedVersion: 2
         x: 56
@@ -561,187 +552,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1fd03ce5a41d1746a40cff8c98746f9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GOAT_21
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 56
-        width: 28
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc59c8442b234904cb41c50deef35dd2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GOAT_22
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 28
-        width: 28
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef7741bc5aa685b4fa932ce3abc0309c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GOAT_23
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 28
-        width: 28
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2326987d4ac3e24495fedab67f0e3c2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GOAT_24
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 28
-        width: 28
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da039295c73e65e4ab2eb3206834031f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GOAT_25
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 28
-        width: 28
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5fbde430cdf724d42a1df7eadf178092
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GOAT_26
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 28
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a2874dc5130dce44bcafb507a8467d4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GOAT_27
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 0
-        width: 28
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9eaecf7fce8b2f342a81c2364f0901dc
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GOAT_28
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 0
-        width: 28
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15e078235cd62e149810dbad3149582a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GOAT_29
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 0
-        width: 28
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 956b0203f990f7a4dae7c5b4f1e1ec8b
+      spriteID: e36944a171194094499811865af85207
       vertices: []
       indices: 
       edges: []
@@ -749,7 +560,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9005b7ebfdbaced4aa89e3649f07193b
+    spriteID: 1363e0c5aa270d543851540cbf84be93
     vertices: []
     indices: 
     edges: []
