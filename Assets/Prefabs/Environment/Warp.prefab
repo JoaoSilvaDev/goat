@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50288682588937256}
   - component: {fileID: 61838005648746826}
   - component: {fileID: 114261282533101104}
+  - component: {fileID: 95847797460005088}
   m_Layer: 2
   m_Name: Warp 2
   m_TagString: Warp
@@ -58,6 +59,7 @@ GameObject:
   - component: {fileID: 50133022311078854}
   - component: {fileID: 61687857325746692}
   - component: {fileID: 114502033965051534}
+  - component: {fileID: 95720195381794950}
   m_Layer: 2
   m_Name: Warp 1
   m_TagString: Warp
@@ -98,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1623659564654916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 9.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4649036994177962}
@@ -196,6 +198,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &95720195381794950
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1950823417007384}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fac16cc04ea6d2445906a128a16f2ea9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95847797460005088
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386598652449832}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fac16cc04ea6d2445906a128a16f2ea9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114237178307286638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,8 +308,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: 959a17119b26de14cb684e3216a9a939, type: 3}
-  m_Color: {r: 0.8584906, g: 0.4251958, b: 0.4251958, a: 1}
+  m_Sprite: {fileID: 21300050, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -316,8 +354,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: 959a17119b26de14cb684e3216a9a939, type: 3}
-  m_Color: {r: 0.8584906, g: 0.4251958, b: 0.4251958, a: 1}
+  m_Sprite: {fileID: 21300050, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
