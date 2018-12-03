@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GroundRandomTile : MonoBehaviour
@@ -15,7 +13,6 @@ public class GroundRandomTile : MonoBehaviour
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         float rand = Mathf.PerlinNoise(transform.position.x + 7 * sceneIndex, transform.position.y) * 10 - 2;
         int index = (int)rand;
-        Debug.Log(index);
         sr.sprite = variations[index];
     }
 }
