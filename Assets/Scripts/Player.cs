@@ -282,7 +282,7 @@ public class Player : MonoBehaviour
                 }
                 else
                 {
-                    _canvas.UpdateHP(0.0f);
+                    _canvas.UpdateHP(hp - 1);
                 }
             }
 
