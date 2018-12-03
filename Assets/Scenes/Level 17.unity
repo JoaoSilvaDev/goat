@@ -484,6 +484,46 @@ Prefab:
       propertyPath: m_Name
       value: Wolf Dungeon (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114798559899388206, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: directions.Array.data[0].y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114798559899388206, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: directions.Array.data[1].y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114798559899388206, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: directions.Array.data[2].x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114798559899388206, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: directions.Array.data[3].x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114798559899388206, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: directions.Array.data[4].y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114798559899388206, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: directions.Array.data[5].y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114798559899388206, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: directions.Array.data[6].x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114798559899388206, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: directions.Array.data[7].x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1efef478388fa4bac57ad0265edc09, type: 2}
   m_IsPrefabAsset: 0
@@ -3078,6 +3118,11 @@ Prefab:
         type: 2}
       propertyPath: m_FlipX
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114619538771554722, guid: 7545ad15a37991341853882f50a016c7,
+        type: 2}
+      propertyPath: hp
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7545ad15a37991341853882f50a016c7, type: 2}
