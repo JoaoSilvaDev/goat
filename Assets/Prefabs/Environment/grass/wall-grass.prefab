@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212085372130441230}
   - component: {fileID: 61436313922188106}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: wall-grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
