@@ -87,141 +87,169 @@ public class Player : MonoBehaviour
         Debug.DrawRay(downCastVector, Vector2.down * raycastDistance, Color.red);
         Debug.DrawRay(leftCastVector, Vector2.left * raycastDistance, Color.red);
         Debug.DrawRay(rightCastVector, Vector2.right * raycastDistance, Color.red);
-
-        if (leftCast.collider != null)
-        {
-            if (leftCast.collider.CompareTag("Enemy"))
-                leftEnemy = true;
-        }
-        if (rightCast.collider != null)
-        {
-            if (rightCast.collider.CompareTag("Enemy"))
-                rightEnemy = true;
-        }
-        if (upCast.collider != null)
-        {
-            if (upCast.collider.CompareTag("Enemy"))
-                upEnemy = true;
-        }
-        if (downCast.collider != null)
-        {
-            if (downCast.collider.CompareTag("Enemy"))
-                downEnemy = true;
-        }
+        
         
         if (!isMoving)
-        {            
+        {
+            if (leftCast.collider != null)
+            {
+                if (leftCast.collider.CompareTag("Enemy"))
+                    leftEnemy = true;
+                else if (leftCast.collider.CompareTag("Walls"))
+                    _input.x = 0.0f;
+                else if (leftCast.collider.CompareTag("Goal"))
+                {
+                    _nextIsGoal = true;
+                    leftEnemy = false;
+                    _input.x = -0.95f;
+                }
+                else if (leftCast.collider.CompareTag("Warp"))
+                {
+                    leftEnemy = false;
+                    _input.x = -0.95f;
+                }
+                else if (leftCast.collider.CompareTag("Sand"))
+                {
+                    leftEnemy = false;
+                    _input.x = -0.95f;
+                }
+            }
+
+            if (rightCast.collider != null)
+            {
+                if (rightCast.collider.CompareTag("Enemy"))
+                    rightEnemy = true;
+                else if (rightCast.collider.CompareTag("Walls"))
+                    _input.x = 0.0f;
+                else if (rightCast.collider.CompareTag("Goal"))
+                {
+                    _nextIsGoal = true;
+                    rightEnemy = false;
+                    _input.x = 0.95f;
+                }
+                else if (rightCast.collider.CompareTag("Warp"))
+                {
+                    rightEnemy = false;
+                    _input.x = 0.95f;
+                }
+                else if (rightCast.collider.CompareTag("Sand"))
+                {
+                    rightEnemy = false;
+                    _input.x = 0.95f;
+                }
+            }
+
+            if (upCast.collider != null)
+            {
+                if (upCast.collider.CompareTag("Enemy"))
+                    upEnemy = true;
+                else if (upCast.collider.CompareTag("Walls"))
+                    _input.y = 0.0f;
+                else if (upCast.collider.CompareTag("Goal"))
+                {
+                    _nextIsGoal = true;
+                    upEnemy = false;
+                    _input.y = 0.95f;
+                }
+                else if (upCast.collider.CompareTag("Warp"))
+                {
+                    upEnemy = false;
+                    _input.y = 0.95f;
+                }
+                else if (upCast.collider.CompareTag("Sand"))
+                {
+                    upEnemy = false;
+                    _input.y = 0.95f;
+                }
+            }
+
+            if (downCast.collider != null)
+            {
+                if (downCast.collider.CompareTag("Enemy"))
+                    downEnemy = true;
+                else if (downCast.collider.CompareTag("Walls"))
+                    _input.y = 0.0f;
+                else if (downCast.collider.CompareTag("Goal"))
+                {
+                    _nextIsGoal = true;
+                    downEnemy = false;
+                    _input.y = -0.95f;
+                }
+                else if (downCast.collider.CompareTag("Warp"))
+                {
+                    downEnemy = false;
+                    _input.y = -0.95f;
+                }
+                else if (downCast.collider.CompareTag("Sand"))
+                {
+                    downEnemy = false;
+                    _input.y = -0.95f;
+                }
+            }
+
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 if (leftCast.collider == null)
-                    _input.x = -0.95f;
-                else
                 {
-                    if (leftCast.collider.CompareTag("Walls"))
-                        _input.x = 0.0f;
-                    else if (leftCast.collider.CompareTag("Goal"))
-                    {
-                        _nextIsGoal = true;
-                        leftEnemy = false;
-                        _input.x = -0.95f;
-                    }
-                    else if (leftCast.collider.CompareTag("Warp"))
-                    {
-                        leftEnemy = false;
-                        _input.x = -0.95f;
-                    }
-                    else if (leftCast.collider.CompareTag("Sand"))
-                    {
-                        leftEnemy = false;
-                        _input.x = -0.95f;
-                    }                   
-                }
-                if (leftEnemy)
+                    leftEnemy = false;
                     _input.x = -0.95f;
+                }
+                if (rightCast.collider == null)
+                    rightEnemy = false;
+                if (upCast.collider == null)
+                    upEnemy = false;
+                if (downCast.collider == null)
+                    downEnemy = false;
+                if (leftEnemy)
+                    leftEnemy = false;
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 if (rightCast.collider == null)
-                    _input.x = 0.95f;
-                else
                 {
-                    if (rightCast.collider.CompareTag("Walls"))
-                        _input.x = 0.0f;
-                    else if (rightCast.collider.CompareTag("Goal"))
-                    {
-                        _nextIsGoal = true;
-                        rightEnemy = false;
-                        _input.x = 0.95f;
-                    }
-                    else if (rightCast.collider.CompareTag("Warp"))
-                    {
-                        rightEnemy = false;
-                        _input.x = 0.95f;
-                    }
-                    else if (rightCast.collider.CompareTag("Sand"))
-                    {
-                        rightEnemy = false;
-                        _input.x = 0.95f;
-                    }
-                }
-                if (rightEnemy)
+                    rightEnemy = false;
                     _input.x = 0.95f;
+                }
+                if (leftCast.collider == null)
+                    leftEnemy = false;
+                if (upCast.collider == null)
+                    upEnemy = false;
+                if (downCast.collider == null)
+                    downEnemy = false;
+                if (rightEnemy)
+                    rightEnemy = false;
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 if (upCast.collider == null)
-                    _input.y = 0.95f;
-                else
                 {
-                    if (upCast.collider.CompareTag("Walls"))
-                        _input.y = 0.0f;
-                    else if (upCast.collider.CompareTag("Goal"))
-                    {
-                        _nextIsGoal = true;
-                        upEnemy = false;
-                        _input.y = 0.95f;
-                    }
-                    else if (upCast.collider.CompareTag("Warp"))
-                    {
-                        upEnemy = false;
-                        _input.y = 0.95f;
-                    }
-                    else if (upCast.collider.CompareTag("Sand"))
-                    {
-                        upEnemy = false;
-                        _input.y = 0.95f;
-                    }                    
-                }
-                if (upEnemy)
+                    upEnemy = false;
                     _input.y = 0.95f;
+                }
+                if (leftCast.collider == null)
+                    leftEnemy = false;
+                if (rightCast.collider == null)
+                    rightEnemy = false;
+                if (downCast.collider == null)
+                    downEnemy = false;
+                if (upEnemy)
+                    upEnemy = false;
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 if (downCast.collider == null)
-                    _input.y = -0.95f;
-                else
                 {
-                    if (downCast.collider.CompareTag("Walls"))
-                        _input.y = 0.0f;
-                    else if (downCast.collider.CompareTag("Goal"))
-                    {
-                        _nextIsGoal = true;
-                        downEnemy = false;
-                        _input.y = -0.95f;
-                    }
-                    else if (downCast.collider.CompareTag("Warp"))
-                    {
-                        downEnemy = false;
-                        _input.y = -0.95f;
-                    }
-                    else if (downCast.collider.CompareTag("Sand"))
-                    {
-                        downEnemy = false;
-                        _input.y = -0.95f;
-                    }
+                    downEnemy = false;
+                    _input.y = -0.95f;
                 }
+                if (leftCast.collider == null)
+                    leftEnemy = false;
+                if (rightCast.collider == null)
+                    rightEnemy = false;
+                if (upCast.collider == null)
+                    upEnemy = false;
                 if (downEnemy)
-                    _input.x = -0.95f;
+                    downEnemy = false;
             }
             else
             {
