@@ -13,9 +13,9 @@ public class GroundRandomTile : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
 
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        float rand = Mathf.PerlinNoise(transform.position.x * sceneIndex, transform.position.y) * 10 * variations.Length;
-        int index = (int)rand / 10;
-
-        sr.sprite = variations[index-1];
+        float rand = Mathf.PerlinNoise(transform.position.x + 7 * sceneIndex, transform.position.y) * 10 - 2;
+        int index = (int)rand;
+        Debug.Log(index);
+        sr.sprite = variations[index];
     }
 }
