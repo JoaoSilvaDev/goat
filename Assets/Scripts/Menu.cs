@@ -7,6 +7,7 @@ public class Menu : MonoBehaviour
 
     public void Play()
     {
+        Cursor.visible = false;
         SceneManager.LoadScene("Level 01", LoadSceneMode.Single);
         if (!_selectHasPlayed)
         {

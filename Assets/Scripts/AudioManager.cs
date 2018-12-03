@@ -34,7 +34,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        Play("Title Screen");
+        Play("Title Screen");        
     }
 
     public void Play(string name)

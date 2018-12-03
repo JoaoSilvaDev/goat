@@ -14,7 +14,7 @@ public class CanvasManager : MonoBehaviour
     void Start()
     {
         _player = FindObjectOfType<Player>();
-        UpdateHP();
+        UpdateHP(_player.hp);
         StartCoroutine(BeginLevelSequence());
 
         Scene scene = SceneManager.GetActiveScene();
@@ -30,9 +30,9 @@ public class CanvasManager : MonoBehaviour
         GetComponent<Canvas>().worldCamera = Camera.main;
     }
 
-    public void UpdateHP()
+    public void UpdateHP(float hp)
     {
-        hpText.text = "x" + _player.hp;
+        hpText.text = "x" + hp;
     }
 
     public void InitEndLevelSequence()
