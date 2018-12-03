@@ -62,8 +62,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (hp <= 0)
+        if (hp == 0)
+        {
             StartCoroutine(GameOver());
+            _input = Vector2.zero;
+        }            
         if (Input.GetKeyDown(KeyCode.R))
             StartCoroutine(GameOver());
     }
@@ -249,11 +252,11 @@ public class Player : MonoBehaviour
                 {
                     _canvas.UpdateHP(0.0f);
                 }
+            }            
+        }        
 
-                if (leftEnemy || rightEnemy || upEnemy || downEnemy)
-                    _collider.enabled = false;
-            }
-        }
+        if (leftEnemy || rightEnemy || upEnemy || downEnemy)
+            _collider.enabled = false;
     }
 
     IEnumerator Move(Transform entity)
@@ -284,7 +287,7 @@ public class Player : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
-        {
+        {                        
             StartCoroutine(GameOver());
         }
         if (collision.CompareTag("Goal"))
@@ -330,14 +333,14 @@ public class Player : MonoBehaviour
 
     IEnumerator GameOver()
     {
+        GetComponent<Player>().enabled = false;
         GetComponent<Animator>().SetTrigger("dead");
         if (!_deathHasPlayed)
         {
             FindObjectOfType<AudioManager>().Play("Death");
             _deathHasPlayed = true;
         }        
-        yield return new WaitForSeconds(1.5f);
-        isMoving = true;
+        yield return new WaitForSeconds(1.5f);        
         SceneManager.LoadScene(losingSceneName, LoadSceneMode.Single);
     }
 
