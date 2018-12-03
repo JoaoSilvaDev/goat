@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class TileManager : MonoBehaviour
+public class TileDepth : MonoBehaviour
 {
 	SpriteRenderer[] tiles;
 

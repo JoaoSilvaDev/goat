@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     public bool upEnemy = false;
     public bool downEnemy = false;
 
-    public string losingSceneName;
+    private string _losingSceneName;
     private string _winningSceneName;
 
     private GameManager _gameManager;
@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         int levelIndex =  int.Parse (scene.name.Substring(scene.name.Length - 2));
         int nextLevel = levelIndex + 1;
 
-        losingSceneName = scene.name;
+        _losingSceneName = scene.name;
 
         if(nextLevel < 10)
             _winningSceneName = "Level 0" + nextLevel.ToString();
@@ -90,19 +90,11 @@ public class Player : MonoBehaviour
         
         
         if (!isMoving)
-        {
+        {                                  
             if (leftCast.collider != null)
             {
                 if (leftCast.collider.CompareTag("Enemy"))
-                    leftEnemy = true;
-                else if (leftCast.collider.CompareTag("Walls"))
-                    _input.x = 0.0f;
-                else if (leftCast.collider.CompareTag("Goal"))
-                {
-                    _nextIsGoal = true;
-                    leftEnemy = false;
-                    _input.x = -0.95f;
-                }
+                    leftEnemy = true;                                
                 else if (leftCast.collider.CompareTag("Warp"))
                 {
                     leftEnemy = false;
@@ -118,15 +110,7 @@ public class Player : MonoBehaviour
             if (rightCast.collider != null)
             {
                 if (rightCast.collider.CompareTag("Enemy"))
-                    rightEnemy = true;
-                else if (rightCast.collider.CompareTag("Walls"))
-                    _input.x = 0.0f;
-                else if (rightCast.collider.CompareTag("Goal"))
-                {
-                    _nextIsGoal = true;
-                    rightEnemy = false;
-                    _input.x = 0.95f;
-                }
+                    rightEnemy = true;                                
                 else if (rightCast.collider.CompareTag("Warp"))
                 {
                     rightEnemy = false;
@@ -142,15 +126,7 @@ public class Player : MonoBehaviour
             if (upCast.collider != null)
             {
                 if (upCast.collider.CompareTag("Enemy"))
-                    upEnemy = true;
-                else if (upCast.collider.CompareTag("Walls"))
-                    _input.y = 0.0f;
-                else if (upCast.collider.CompareTag("Goal"))
-                {
-                    _nextIsGoal = true;
-                    upEnemy = false;
-                    _input.y = 0.95f;
-                }
+                    upEnemy = true;                                
                 else if (upCast.collider.CompareTag("Warp"))
                 {
                     upEnemy = false;
@@ -166,15 +142,7 @@ public class Player : MonoBehaviour
             if (downCast.collider != null)
             {
                 if (downCast.collider.CompareTag("Enemy"))
-                    downEnemy = true;
-                else if (downCast.collider.CompareTag("Walls"))
-                    _input.y = 0.0f;
-                else if (downCast.collider.CompareTag("Goal"))
-                {
-                    _nextIsGoal = true;
-                    downEnemy = false;
-                    _input.y = -0.95f;
-                }
+                    downEnemy = true;                                
                 else if (downCast.collider.CompareTag("Warp"))
                 {
                     downEnemy = false;
@@ -194,6 +162,15 @@ public class Player : MonoBehaviour
                     leftEnemy = false;
                     _input.x = -0.95f;
                 }
+                else if (leftCast.collider.CompareTag("Walls"))
+                    _input.x = 0.0f;
+                else if (leftCast.collider.CompareTag("Goal"))
+                {
+                    _nextIsGoal = true;
+                    leftEnemy = false;
+                    _input.x = -0.95f;
+                }
+
                 if (rightCast.collider == null)
                     rightEnemy = false;
                 if (upCast.collider == null)
@@ -210,6 +187,15 @@ public class Player : MonoBehaviour
                     rightEnemy = false;
                     _input.x = 0.95f;
                 }
+                else if (rightCast.collider.CompareTag("Walls"))
+                    _input.x = 0.0f;
+                else if (rightCast.collider.CompareTag("Goal"))
+                {
+                    _nextIsGoal = true;
+                    rightEnemy = false;
+                    _input.x = 0.95f;
+                }
+
                 if (leftCast.collider == null)
                     leftEnemy = false;
                 if (upCast.collider == null)
@@ -226,10 +212,19 @@ public class Player : MonoBehaviour
                     upEnemy = false;
                     _input.y = 0.95f;
                 }
-                if (leftCast.collider == null)
-                    leftEnemy = false;
+                else if (upCast.collider.CompareTag("Walls"))
+                    _input.y = 0.0f;
+                else if (upCast.collider.CompareTag("Goal"))
+                {
+                    _nextIsGoal = true;
+                    upEnemy = false;
+                    _input.y = 0.95f;
+                }
+
                 if (rightCast.collider == null)
                     rightEnemy = false;
+                if (leftCast.collider == null)
+                    leftEnemy = false;
                 if (downCast.collider == null)
                     downEnemy = false;
                 if (upEnemy)
@@ -242,6 +237,15 @@ public class Player : MonoBehaviour
                     downEnemy = false;
                     _input.y = -0.95f;
                 }
+                else if (downCast.collider.CompareTag("Walls"))
+                    _input.y = 0.0f;
+                else if (downCast.collider.CompareTag("Goal"))
+                {
+                    _nextIsGoal = true;
+                    downEnemy = false;
+                    _input.y = -0.95f;
+                }
+
                 if (leftCast.collider == null)
                     leftEnemy = false;
                 if (rightCast.collider == null)
@@ -280,11 +284,11 @@ public class Player : MonoBehaviour
                 {
                     _canvas.UpdateHP(0.0f);
                 }
-            }            
-        }        
+            }
 
-        if (leftEnemy || rightEnemy || upEnemy || downEnemy)
-            _collider.enabled = false;
+            if (leftEnemy || rightEnemy || upEnemy || downEnemy)
+                _collider.enabled = false;
+        }                  
     }
 
     IEnumerator Move(Transform entity)
@@ -369,7 +373,7 @@ public class Player : MonoBehaviour
             _deathHasPlayed = true;
         }        
         yield return new WaitForSeconds(1.5f);        
-        SceneManager.LoadScene(losingSceneName, LoadSceneMode.Single);
+        SceneManager.LoadScene(_losingSceneName, LoadSceneMode.Single);
     }
 
     IEnumerator Winning()
