@@ -2810,6 +2810,17 @@ Prefab:
       propertyPath: directions.Array.data[1].x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 95203561762156528, guid: 5ce14e7801d08fc4898f6d02190262df,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 09ea463456cf9a34392528805e5473b6, type: 2}
+    - target: {fileID: 212676854935467842, guid: 5ce14e7801d08fc4898f6d02190262df,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300008, guid: 805f3609bb358a14ab43a2e7937521bd,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ce14e7801d08fc4898f6d02190262df, type: 2}
   m_IsPrefabAsset: 0

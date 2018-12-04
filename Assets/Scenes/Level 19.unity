@@ -2647,11 +2647,11 @@ Transform:
   - {fileID: 793271810}
   - {fileID: 1379448021}
   - {fileID: 805932669}
+  - {fileID: 383052385}
   - {fileID: 573652767}
   - {fileID: 352446372}
-  - {fileID: 383052385}
-  - {fileID: 1206257174}
   - {fileID: 172586705}
+  - {fileID: 1206257174}
   - {fileID: 1231051103}
   - {fileID: 539459934}
   - {fileID: 1057370237}
@@ -2749,6 +2749,17 @@ Prefab:
       propertyPath: directions.Array.data[7].x
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 95203561762156528, guid: 5ce14e7801d08fc4898f6d02190262df,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 09ea463456cf9a34392528805e5473b6, type: 2}
+    - target: {fileID: 212676854935467842, guid: 5ce14e7801d08fc4898f6d02190262df,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300008, guid: 805f3609bb358a14ab43a2e7937521bd,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ce14e7801d08fc4898f6d02190262df, type: 2}
   m_IsPrefabAsset: 0
