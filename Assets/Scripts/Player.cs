@@ -172,6 +172,10 @@ public class Player : MonoBehaviour
                     leftEnemy = false;
                     _input.x = -0.95f;
                 }
+                else if (leftCast.collider.CompareTag("Enemy"))
+                {
+                    _input.x = -0.95f;
+                }
 
                 if (rightCast.collider == null)
                     rightEnemy = false;
@@ -179,8 +183,6 @@ public class Player : MonoBehaviour
                     upEnemy = false;
                 if (downCast.collider == null)
                     downEnemy = false;
-                if (leftEnemy)
-                    leftEnemy = false;
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow))
             {
@@ -197,6 +199,10 @@ public class Player : MonoBehaviour
                     rightEnemy = false;
                     _input.x = 0.95f;
                 }
+                else if (rightCast.collider.CompareTag("Enemy"))
+                {
+                    _input.x = 0.95f;
+                }
 
                 if (leftCast.collider == null)
                     leftEnemy = false;
@@ -204,8 +210,6 @@ public class Player : MonoBehaviour
                     upEnemy = false;
                 if (downCast.collider == null)
                     downEnemy = false;
-                if (rightEnemy)
-                    rightEnemy = false;
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow))
             {
@@ -222,6 +226,10 @@ public class Player : MonoBehaviour
                     upEnemy = false;
                     _input.y = 0.95f;
                 }
+                else if (upCast.collider.CompareTag("Enemy"))
+                {
+                    _input.y = 0.95f;
+                }
 
                 if (rightCast.collider == null)
                     rightEnemy = false;
@@ -229,8 +237,6 @@ public class Player : MonoBehaviour
                     leftEnemy = false;
                 if (downCast.collider == null)
                     downEnemy = false;
-                if (upEnemy)
-                    upEnemy = false;
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
@@ -247,6 +253,10 @@ public class Player : MonoBehaviour
                     downEnemy = false;
                     _input.y = -0.95f;
                 }
+                else if (downCast.collider.CompareTag("Enemy"))
+                {
+                    _input.y = -0.95f;
+                }
 
                 if (leftCast.collider == null)
                     leftEnemy = false;
@@ -254,8 +264,6 @@ public class Player : MonoBehaviour
                     rightEnemy = false;
                 if (upCast.collider == null)
                     upEnemy = false;
-                if (downEnemy)
-                    downEnemy = false;
             }
             else
             {
@@ -286,10 +294,7 @@ public class Player : MonoBehaviour
                 {
                     _canvas.UpdateHP(hp - 1);
                 }
-            }
-
-            if (leftEnemy || rightEnemy || upEnemy || downEnemy)
-                _collider.enabled = false;
+            }            
         }                  
     }
 
@@ -306,6 +311,8 @@ public class Player : MonoBehaviour
 
         while (_time < 1.0f && !isWarping && hp >= 0)
         {
+            if (leftEnemy || rightEnemy || upEnemy || downEnemy)
+                _collider.enabled = false;
             GetComponent<Animator>().SetBool("jump", true);            
             _time += Time.deltaTime * speed;
             entity.position = Vector3.Lerp(startPos, endPos, _time);
@@ -335,6 +342,7 @@ public class Player : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("Teleport");
                 _teleportHasPlayed = true;
             }
+            _teleportHasPlayed = false;
             StartCoroutine(WarpEnter(collision.gameObject));
         }
         if (collision.CompareTag("Key"))

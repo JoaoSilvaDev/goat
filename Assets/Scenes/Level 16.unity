@@ -1089,6 +1089,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4417063332547056, guid: 77b7116bded5a0348a138c6691920437,
     type: 2}
   m_PrefabInternal: {fileID: 599984385}
+--- !u!114 &612062707 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114723452768691784, guid: 07fbcbf2ee5e83742b1061a08b9452d3,
+    type: 2}
+  m_PrefabInternal: {fileID: 2021410604}
+  m_Script: {fileID: 11500000, guid: 5b0986c2194283b438dffbc9472dc293, type: 3}
 --- !u!1001 &699458913
 Prefab:
   m_ObjectHideFlags: 0
@@ -3464,6 +3470,11 @@ Prefab:
       propertyPath: hp
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114619538771554722, guid: 7545ad15a37991341853882f50a016c7,
+        type: 2}
+      propertyPath: goal
+      value: 
+      objectReference: {fileID: 612062707}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7545ad15a37991341853882f50a016c7, type: 2}
   m_IsPrefabAsset: 0
