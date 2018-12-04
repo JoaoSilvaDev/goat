@@ -10,6 +10,7 @@ TagManager:
   - Sand
   - Warp
   - Key
+  - Spike
   layers:
   - Default
   - TransparentFX
