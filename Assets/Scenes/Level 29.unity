@@ -1701,6 +1701,11 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212814370663394736, guid: 9081c04b5135d6e498aeeed0e696ec3c,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9081c04b5135d6e498aeeed0e696ec3c, type: 2}
   m_IsPrefabAsset: 0
@@ -3047,6 +3052,11 @@ Prefab:
       propertyPath: warpManager
       value: 
       objectReference: {fileID: 1715300407}
+    - target: {fileID: 212568862109969932, guid: 7545ad15a37991341853882f50a016c7,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7545ad15a37991341853882f50a016c7, type: 2}
   m_IsPrefabAsset: 0
