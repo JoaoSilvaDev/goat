@@ -13,7 +13,7 @@ public class GroundRandomTile : MonoBehaviour
         //int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         //float rand = Mathf.PerlinNoise(transform.position.x + 7 * sceneIndex, transform.position.y) * 10 - 3;
         //int index = (int)rand;
-        int index = Random.Range(0, 2);
+        int index = Random.Range(0, 3);
         sr.sprite = variations[index];
     }
 }
