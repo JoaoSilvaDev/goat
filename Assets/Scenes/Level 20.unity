@@ -152,7 +152,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 36
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114921401419572490, guid: 53fe39aa7d3b973489eba7d3347f1010, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 53fe39aa7d3b973489eba7d3347f1010, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &3029748 stripped
@@ -341,7 +342,6 @@ GameObject:
   m_Component:
   - component: {fileID: 92900673}
   - component: {fileID: 92900675}
-  - component: {fileID: 92900674}
   m_Layer: 0
   m_Name: dungeon-ground-bl
   m_TagString: Untagged
@@ -363,22 +363,6 @@ Transform:
   m_Father: {fileID: 1559740811}
   m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &92900674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114123249358091448, guid: 1a2f495bab709f24997822cd3d6adfec,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 92900672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9037d8866e3bb8749b2ba04da10d790b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variations:
-  - {fileID: 21300044, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300046, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300048, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
 --- !u!212 &92900675
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -631,7 +615,6 @@ GameObject:
   m_Component:
   - component: {fileID: 224635154}
   - component: {fileID: 224635156}
-  - component: {fileID: 224635155}
   m_Layer: 0
   m_Name: dungeon-ground-br (1)
   m_TagString: Untagged
@@ -653,22 +636,6 @@ Transform:
   m_Father: {fileID: 1559740811}
   m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &224635155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114803086283448166, guid: 1a2f495bab709f24997822cd3d6adfec,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 224635153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9037d8866e3bb8749b2ba04da10d790b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variations:
-  - {fileID: 21300044, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300046, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300048, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
 --- !u!212 &224635156
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -936,7 +903,6 @@ GameObject:
   m_Component:
   - component: {fileID: 364025794}
   - component: {fileID: 364025796}
-  - component: {fileID: 364025795}
   m_Layer: 0
   m_Name: dungeon-ground-br
   m_TagString: Untagged
@@ -958,22 +924,6 @@ Transform:
   m_Father: {fileID: 1559740811}
   m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &364025795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114803086283448166, guid: 1a2f495bab709f24997822cd3d6adfec,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 364025793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9037d8866e3bb8749b2ba04da10d790b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variations:
-  - {fileID: 21300044, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300046, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300048, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
 --- !u!212 &364025796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1340,7 +1290,6 @@ GameObject:
   m_Component:
   - component: {fileID: 647675127}
   - component: {fileID: 647675129}
-  - component: {fileID: 647675128}
   m_Layer: 0
   m_Name: dungeon-ground-bl (1)
   m_TagString: Untagged
@@ -1362,22 +1311,6 @@ Transform:
   m_Father: {fileID: 1559740811}
   m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &647675128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114123249358091448, guid: 1a2f495bab709f24997822cd3d6adfec,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 647675126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9037d8866e3bb8749b2ba04da10d790b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variations:
-  - {fileID: 21300044, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300046, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300048, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
 --- !u!212 &647675129
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1464,7 +1397,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 39
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114921401419572490, guid: 59add4f700eda7c43a5568f9c33b70bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 59add4f700eda7c43a5568f9c33b70bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &668973146 stripped
@@ -1757,7 +1691,8 @@ Prefab:
       propertyPath: m_Name
       value: dungeon-ground-x (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114921401419572490, guid: 53fe39aa7d3b973489eba7d3347f1010, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 53fe39aa7d3b973489eba7d3347f1010, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &832181057 stripped
@@ -1808,7 +1743,8 @@ Prefab:
       propertyPath: m_Name
       value: dungeon-ground-v (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114921401419572490, guid: 59add4f700eda7c43a5568f9c33b70bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 59add4f700eda7c43a5568f9c33b70bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &836553113 stripped
@@ -1877,7 +1813,6 @@ GameObject:
   m_Component:
   - component: {fileID: 953474017}
   - component: {fileID: 953474019}
-  - component: {fileID: 953474018}
   m_Layer: 0
   m_Name: dungeon-ground-tr
   m_TagString: Untagged
@@ -1899,22 +1834,6 @@ Transform:
   m_Father: {fileID: 1559740811}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &953474018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114227795829438314, guid: 1a2f495bab709f24997822cd3d6adfec,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 953474016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9037d8866e3bb8749b2ba04da10d790b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variations:
-  - {fileID: 21300044, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300046, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300048, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
 --- !u!212 &953474019
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2005,7 +1924,8 @@ Prefab:
       propertyPath: m_Name
       value: dungeon-ground-h (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114921401419572490, guid: 69e8d805b2ff27741b82ef8e4bafb1ae, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 69e8d805b2ff27741b82ef8e4bafb1ae, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1043087391 stripped
@@ -2218,7 +2138,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1280639304}
   - component: {fileID: 1280639306}
-  - component: {fileID: 1280639305}
   m_Layer: 0
   m_Name: dungeon-ground-tl (1)
   m_TagString: Untagged
@@ -2240,22 +2159,6 @@ Transform:
   m_Father: {fileID: 1559740811}
   m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1280639305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114844197848552218, guid: 1a2f495bab709f24997822cd3d6adfec,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1280639303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9037d8866e3bb8749b2ba04da10d790b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variations:
-  - {fileID: 21300044, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300046, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300048, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
 --- !u!212 &1280639306
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2443,7 +2346,8 @@ Prefab:
       propertyPath: m_Name
       value: dungeon-ground-h (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114921401419572490, guid: 69e8d805b2ff27741b82ef8e4bafb1ae, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 69e8d805b2ff27741b82ef8e4bafb1ae, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1314404705 stripped
@@ -3064,7 +2968,8 @@ Prefab:
       propertyPath: m_Name
       value: dungeon-ground-h (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114921401419572490, guid: 69e8d805b2ff27741b82ef8e4bafb1ae, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 69e8d805b2ff27741b82ef8e4bafb1ae, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1816420301 stripped
@@ -3082,7 +2987,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1904861962}
   - component: {fileID: 1904861964}
-  - component: {fileID: 1904861963}
   m_Layer: 0
   m_Name: dungeon-ground-tl
   m_TagString: Untagged
@@ -3104,22 +3008,6 @@ Transform:
   m_Father: {fileID: 1559740811}
   m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1904861963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114844197848552218, guid: 1a2f495bab709f24997822cd3d6adfec,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1904861961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9037d8866e3bb8749b2ba04da10d790b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variations:
-  - {fileID: 21300044, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300046, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300048, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
 --- !u!212 &1904861964
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3259,7 +3147,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1988616811}
   - component: {fileID: 1988616813}
-  - component: {fileID: 1988616812}
   m_Layer: 0
   m_Name: dungeon-ground-tr (1)
   m_TagString: Untagged
@@ -3281,22 +3168,6 @@ Transform:
   m_Father: {fileID: 1559740811}
   m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1988616812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114227795829438314, guid: 1a2f495bab709f24997822cd3d6adfec,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1988616810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9037d8866e3bb8749b2ba04da10d790b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variations:
-  - {fileID: 21300044, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300046, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
-  - {fileID: 21300048, guid: 7cd521b13a5b9f64baca7fa8536ad142, type: 3}
 --- !u!212 &1988616813
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3919,7 +3790,8 @@ Prefab:
       propertyPath: m_Name
       value: dungeon-ground-h (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114921401419572490, guid: 69e8d805b2ff27741b82ef8e4bafb1ae, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 69e8d805b2ff27741b82ef8e4bafb1ae, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &2101528743 stripped

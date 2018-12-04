@@ -69,6 +69,8 @@ public class Player : MonoBehaviour
         }            
         if (Input.GetKeyDown(KeyCode.R))
             StartCoroutine(GameOver());
+        if(Input.GetKeyDown(KeyCode.O))
+            StartCoroutine(Winning());
     }
 
     void FixedUpdate()
