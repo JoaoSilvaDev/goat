@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
         Debug.DrawRay(rightCastVector, Vector2.right * raycastDistance, Color.red);
         
         
-        if (!isMoving)
+        if (!isMoving && !isWarping)
         {                                  
             if (leftCast.collider != null)
             {
