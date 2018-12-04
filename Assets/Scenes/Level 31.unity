@@ -981,6 +981,17 @@ Prefab:
       propertyPath: directions.Array.data[7].x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 95889216313030526, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d95d77a1be6592b40951e916972b3193, type: 2}
+    - target: {fileID: 212005031772307894, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300070, guid: b1abbbcefd5a34a49b0034267380f6b4,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1efef478388fa4bac57ad0265edc09, type: 2}
   m_IsPrefabAsset: 0
@@ -2174,6 +2185,17 @@ Prefab:
       propertyPath: directions.Array.data[7].y
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 95889216313030526, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d95d77a1be6592b40951e916972b3193, type: 2}
+    - target: {fileID: 212005031772307894, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300070, guid: b1abbbcefd5a34a49b0034267380f6b4,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1efef478388fa4bac57ad0265edc09, type: 2}
   m_IsPrefabAsset: 0
@@ -2463,6 +2485,17 @@ Prefab:
       propertyPath: directions.Array.data[7].y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 95889216313030526, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d95d77a1be6592b40951e916972b3193, type: 2}
+    - target: {fileID: 212005031772307894, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300070, guid: b1abbbcefd5a34a49b0034267380f6b4,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1efef478388fa4bac57ad0265edc09, type: 2}
   m_IsPrefabAsset: 0
@@ -3515,6 +3548,17 @@ Prefab:
       propertyPath: directions.Array.data[5].y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 95889216313030526, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d95d77a1be6592b40951e916972b3193, type: 2}
+    - target: {fileID: 212005031772307894, guid: aa1efef478388fa4bac57ad0265edc09,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300070, guid: b1abbbcefd5a34a49b0034267380f6b4,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1efef478388fa4bac57ad0265edc09, type: 2}
   m_IsPrefabAsset: 0
